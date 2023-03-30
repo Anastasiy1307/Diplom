@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/student"
+        android:id="@+id/Login"
         android:layout_width="281dp"
         android:layout_height="56dp"
         android:layout_marginStart="33dp"

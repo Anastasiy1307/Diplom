@@ -9,23 +9,23 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="123dp"
-        android:layout_height="106dp"
+        android:layout_width="539dp"
+        android:layout_height="472dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="72dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.002"
+        app:layout_constraintVertical_bias="0.015"
         app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/Login"
-        android:layout_width="190dp"
-        android:layout_height="42dp"
+        android:layout_width="660dp"
+        android:layout_height="100dp"
         android:layout_marginStart="65dp"
 
         android:layout_marginEnd="65dp"
@@ -37,37 +37,37 @@
         android:textColorHighlight="#D0D1F0"
         android:textColorLink="#D0D1F0"
 
-        android:textSize="12sp"
+        android:textSize="30sp"
         android:textStyle="bold"
+        app:shapeAppearanceOverlay="@style/Round"
         app:layout_constraintBottom_toTopOf="@+id/psychologist"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.894"
         app:rippleColor="#8082B4" />
 
     <Button
         android:id="@+id/psychologist"
-        android:layout_width="190dp"
-        android:layout_height="42dp"
+        android:layout_width="660dp"
+        android:layout_height="100dp"
         android:layout_marginStart="65dp"
 
         android:layout_marginEnd="65dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="100dp"
 
         android:backgroundTint="#606287"
         android:fontFamily="@font/lora"
         android:text="Я психолог"
         android:textColor="#D0D1F0"
+        app:shapeAppearanceOverlay="@style/Round"
 
         android:textColorHighlight="#D0D1F0"
         android:textColorLink="#D0D1F0"
-        android:textSize="12sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="#8082B4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

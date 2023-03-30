@@ -45,7 +45,7 @@
         app:rippleColor="#8082B4" />
 
     <Button
-        android:id="@+id/student"
+        android:id="@+id/Login"
         android:layout_width="281dp"
         android:layout_height="56dp"
         android:layout_marginStart="65dp"

@@ -17,7 +17,7 @@ public class AVT extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_avt);
-        Student = (Button) findViewById(R.id.student);
+        Student = (Button) findViewById(R.id.Login);
         Psychologist = (Button) findViewById(R.id.psychologist);
         Student.setOnClickListener(new View.OnClickListener() {
             @Override
