@@ -4,6 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B3B5E7"
     tools:context=".LogIn_student">
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+
+        android:fontFamily="@font/lora"
+        android:text="Авторизация"
+        android:textColor="#606287"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/Group"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#606287"
+
+        android:fontFamily="@font/lora"
+        android:hint="Введите группу"
+        android:textAlignment="viewStart"
+        android:textColor="#606287"
+        android:textColorHighlight="#606287"
+        android:textColorHint=" #606287"
+        android:textColorLink="#606287"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/student"
+        android:layout_width="281dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="120dp"
+
+        android:backgroundTint="#606287"
+        android:fontFamily="@font/lora"
+        android:text="Войти"
+
+        android:textColor="#D0D1F0"
+        android:textColorHighlight="#D0D1F0"
+        android:textColorLink="#D0D1F0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Group"
+        app:layout_constraintVertical_bias="0.986"
+        app:rippleColor="#8082B4" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="110dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
