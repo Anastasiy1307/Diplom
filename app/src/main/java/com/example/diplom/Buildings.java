@@ -10,11 +10,21 @@ public class Buildings implements Parcelable {
 
 
     private int ID;
+    private String number;
     private String Img;
 
 
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
     protected Buildings(Parcel in) {
         ID = in.readInt();
+        number = in.readString();
         Img = in.readString();
 
     }
@@ -54,8 +64,9 @@ public class Buildings implements Parcelable {
 
 
 
-    public Buildings(int ID, String img) {
+    public Buildings(int ID, String number, String img) {
         this.ID = ID;
+        this.number = number;
         Img = img;
 
     }
@@ -68,7 +79,7 @@ public class Buildings implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(ID);
-
+        dest.writeString(number);
         dest.writeString(Img);
     }
 }

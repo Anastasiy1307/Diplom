@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B3B5E7"
     tools:context=".Glavn_Ps">
 
     <ListView
         android:id="@+id/List_build"
-        android:layout_width="409dp"
-        android:layout_height="889dp"
+        android:layout_width="408dp"
+        android:layout_height="727dp"
+        android:background="#B3B5E7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

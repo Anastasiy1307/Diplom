@@ -91,8 +91,8 @@ public class AdapterBuilding extends BaseAdapter {
         ImageView Image= v.findViewById(R.id.PhotoKorp);
 
         Buildings mask=maskList.get(position);
+        ID.setText(mask.getNumber());
 
-        ID.setText(mask.getID());
 
         Image.setImageBitmap(getUserImage(mask.getImg()));
 
@@ -100,7 +100,7 @@ public class AdapterBuilding extends BaseAdapter {
             @Override
             public void onClick(View view) {
                 Intent intenDetalis=new Intent(nContext,Korpus.class);
-                intenDetalis.putExtra("Sotrudnic",mask);
+                intenDetalis.putExtra("korpus",mask);
                 nContext.startActivity(intenDetalis);
 
             }
