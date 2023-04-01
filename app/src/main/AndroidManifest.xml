@@ -16,6 +16,20 @@
         android:theme="@style/Theme.Diplom"
         tools:targetApi="31">
         <activity
+            android:name=".Korpus"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Buildings"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Glavn_Ps"
             android:exported="false">
             <meta-data

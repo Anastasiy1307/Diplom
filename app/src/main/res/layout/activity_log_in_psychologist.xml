@@ -24,26 +24,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/password"
-        android:layout_width="335dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="#606287"
-
-        android:fontFamily="@font/lora"
-        android:hint="Пароль"
-        android:textAlignment="viewStart"
-        android:textColor="#606287"
-        android:textColorHighlight="#606287"
-        android:textColorHint="#606287"
-        android:textColorLink="#606287"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LogIn" />
-
-    <EditText
         android:id="@+id/LogIn"
         android:layout_width="335dp"
         android:layout_height="48dp"
@@ -68,22 +48,22 @@
         android:layout_width="281dp"
         android:layout_height="56dp"
         android:layout_marginStart="33dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="208dp"
         android:layout_marginEnd="34dp"
-        android:backgroundTint="#606287"
 
+        android:backgroundTint="#606287"
         android:fontFamily="@font/lora"
         android:text="Войти"
-        android:textColor="#D0D1F0"
 
+        android:textColor="#D0D1F0"
         android:textColorHighlight="#D0D1F0"
         android:textColorLink="#D0D1F0"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         app:rippleColor="#8082B4" />
 
     <ImageView
@@ -96,4 +76,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="335dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#606286"
+        android:ems="10"
+        android:fontFamily="@font/lora"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:textColor="#606287"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LogIn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
