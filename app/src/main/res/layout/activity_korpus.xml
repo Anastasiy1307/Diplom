@@ -4,6 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B3B5E7"
     tools:context=".Korpus">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/korpus_img"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="150dp"
+        android:onClick="profile"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/result_korp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/Round"
+        app:srcCompat="@drawable/nophoto" />
+
+    <Button
+        android:id="@+id/result_korp"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
+
+        android:layout_marginTop="660dp"
+        android:backgroundTint="#606287"
+        android:fontFamily="@font/lora"
+        android:text="Результаты по корпусу"
+        android:textColor="#D0D1F0"
+
+        android:textColorHighlight="#D0D1F0"
+        android:textColorLink="#D0D1F0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="#8082B4" />
+
+    <Button
+        android:id="@+id/result_group2"
+        android:layout_width="354dp"
+        android:layout_height="54dp"
+
+        android:backgroundTint="#606287"
+        android:fontFamily="@font/lora"
+        android:text="Результаты по группам"
+        android:textColor="#D0D1F0"
+        android:textColorHighlight="#D0D1F0"
+
+        android:textColorLink="#D0D1F0"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result_korp"
+        app:layout_constraintVertical_bias="0.153"
+        app:rippleColor="#8082B4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
