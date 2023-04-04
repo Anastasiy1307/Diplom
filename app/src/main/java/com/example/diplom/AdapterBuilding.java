@@ -55,15 +55,7 @@ public class AdapterBuilding extends BaseAdapter {
     @Override
     public long getItemId(int i) {return maskList.get(i).getID();}
 
-    public static Bitmap loadContactPhoto(ContentResolver cr, long id, Context context) {
-        Uri uri = ContentUris.withAppendedId(ContactsContract.Contacts.CONTENT_URI, id);
-        InputStream input = ContactsContract.Contacts.openContactPhotoInputStream(cr, uri);
-        if (input == null) {
-            Resources res = context.getResources();
-            return BitmapFactory.decodeResource(res, R.drawable.nophoto);
-        }
-        return BitmapFactory.decodeStream(input);
-    }
+
 
 
     private Bitmap getUserImage(String encodedImg)
@@ -88,7 +80,7 @@ public class AdapterBuilding extends BaseAdapter {
         View v =View.inflate(nContext,R.layout.activity_buildings,null);
 
         TextView ID=v.findViewById(R.id.name);
-        ImageView Image= v.findViewById(R.id.PhotoKorp);
+       ImageView Image= v.findViewById(R.id.PhotoKorp);
 
         Buildings mask=maskList.get(position);
         ID.setText(mask.getNumber());

@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 
@@ -26,17 +27,22 @@ public class Glavn_Ps extends AppCompatActivity {
     List<Buildings> data;
     ListView listView;
     AdapterBuilding pAdapter;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glavn_ps);
         v = findViewById(com.google.android.material.R.id.ghost_view);
         GetTextFromSQL(v);
+
+
     }
     public void enterMobile() {
         pAdapter.notifyDataSetInvalidated();
         listView.setAdapter(pAdapter);
     }
+
+
 
     public void GetTextFromSQL(View v) {
         data = new ArrayList<Buildings>();
