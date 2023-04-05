@@ -34,6 +34,7 @@ public class LogIn_student extends AppCompatActivity {
             public void onClick(View v) {
 
                 new LogIn_student.LogInStudent().execute("");
+                Intent intent = new Intent(LogIn_student.this, Tests.class);
 
             }
         });
@@ -59,9 +60,10 @@ public class LogIn_student extends AppCompatActivity {
             }
             else {
                 try {
-                    String sql = "Select Name_group From Classes Where Name_group = '" + group.getText() + "'";
+                    String sql = "Select ID From Classes Where Name_group = '" + group.getText() + "'";
                     Statement statement = connection.createStatement();
                     ResultSet rs = statement.executeQuery(sql);
+
 
                     if (rs.next()) {
                         runOnUiThread(new Runnable() {
@@ -73,6 +75,7 @@ public class LogIn_student extends AppCompatActivity {
                         z = "Успешно";
 
                         Intent intent = new Intent(LogIn_student.this, Tests.class);
+                        intent.putExtra("id_group", sql);
                         startActivity(intent);
                         finish();
                     } else {
