@@ -33,7 +33,7 @@ public class LogIn_psychologist extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-                else {
+                else {//Условие не выпоняется
                     Toast.makeText(LogIn_psychologist.this, "Проверьте логин или пароль", Toast.LENGTH_LONG).show();
                 }
 

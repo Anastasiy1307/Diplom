@@ -17,6 +17,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Random;
 
 public class LogIn_student extends AppCompatActivity {
@@ -73,7 +74,7 @@ public class LogIn_student extends AppCompatActivity {
 
                 try {
 
-                    String sql = "Select ID From Classes Where Name_group = '" + group.getText() + "'";
+                    String sql = "Select ID From Classes Where Name_group = '" + group.getText() + "'";//Проверка на соответствие данных с БД
                     Statement statement = connection.createStatement();
                     ResultSet rs = statement.executeQuery(sql);
 
@@ -125,14 +126,15 @@ public class LogIn_student extends AppCompatActivity {
         String z = null;
 
         Random random = new Random();
-        int randomId = random.nextInt(1000);
+        int randomId = random.nextInt(2000);//генерация Id
         int rID = randomId;
-        Calendar crntime = Calendar.getInstance();
-        SimpleDateFormat crnttimenow = new SimpleDateFormat("yyyy-mm-dd");
-        String datanow = crnttimenow.format(crntime.getTime());
+
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy.LL.dd");//Формат даты, где y - год, L - месяц, d - день
+        String date = sdf.format(new Date());
         String query="";
         if (connection != null) {
-            query = "INSERT INTO Result (ID, ID_group,  Result, Date) Select " + rID + ", Classes.ID, '', '"+datanow+"' From Classes Where Name_group = '"+ group.getText()+ "'";
+            query = "INSERT INTO Result (ID, ID_group,  Result, Date) Select " + rID + ", Classes.ID, NULL, '"+date+"' From Classes Where Name_group = '"+ group.getText()+ "'";//запись в таблицу "Результаты" Даты, Id группы и рандомного id
 
         }
         else
