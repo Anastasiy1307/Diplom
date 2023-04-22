@@ -5,25 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
-public class Tests extends AppCompatActivity {
-    TextView textView;
+public class Help extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tests);
-
+        setContentView(R.layout.activity_help);
     }
 
-    public void Help(View v) {
-        Intent intent = new Intent(Tests.this, Help.class);
+
+    public void Test(View v) {
+        Intent intent = new Intent(Help.this, Tests.class);
         startActivity(intent);
         finish();
     }
 
     public void Calm(View v) {
-        Intent intent = new Intent(Tests.this, Calm.class);
+        Intent intent = new Intent(Help.this, Calm.class);
         startActivity(intent);
         finish();
     }
