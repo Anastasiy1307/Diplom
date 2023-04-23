@@ -35,8 +35,7 @@
             <RelativeLayout
                 android:id="@+id/rl"
                 android:layout_width="wrap_content"
-                android:layout_height="221dp"
-                android:layout_below="@id/logo"
+                android:layout_height="231dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
@@ -52,7 +51,7 @@
                     android:layout_marginEnd="28dp"
                     android:layout_toStartOf="@+id/Progress"
                     android:fontFamily="@font/lora"
-                    android:text="Профессиональный рост и мотивация"
+                    android:text="Шкала Профессиональный рост и мотивация"
                     android:textColor="#606287"
                     android:textSize="18dp" />
 
@@ -70,7 +69,7 @@
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="59dp"
+                    android:layout_marginTop="75dp"
                     android:layout_marginEnd="1dp"
                     android:fontFamily="@font/lora"
                     android:text="Отметьте напротив каждого утвержения степень вашего согласия с ним"
@@ -78,14 +77,15 @@
                     android:textSize="14dp" />
 
                 <Button
+                    android:id="@+id/prim"
                     android:layout_width="302dp"
                     android:layout_height="46dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="40dp"
-                    android:layout_marginTop="145dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_marginEnd="32dp"
                     android:backgroundTint="#606287"
                     android:fontFamily="@font/lora"
                     android:text="Начать тестирование"
@@ -139,6 +139,7 @@
                     android:textSize="14dp" />
 
                 <Button
+                    android:id="@+id/hpt"
                     android:layout_width="302dp"
                     android:layout_height="46dp"
                     android:layout_alignParentStart="true"
@@ -198,6 +199,7 @@
                     android:textSize="14dp" />
 
                 <Button
+                    android:id="@+id/sytav"
                     android:layout_width="302dp"
                     android:layout_height="46dp"
                     android:layout_alignParentStart="true"
@@ -257,6 +259,7 @@
                     android:textSize="14dp" />
 
                 <Button
+                    android:id="@+id/okios"
                     android:layout_width="302dp"
                     android:layout_height="46dp"
                     android:layout_alignParentStart="true"
@@ -273,6 +276,7 @@
 
         </LinearLayout>
     </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
