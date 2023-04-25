@@ -20,286 +20,37 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-    <ScrollView
-        android:id="@+id/Sv"
+    <ListView
+        android:id="@+id/LTests"
         android:layout_width="match_parent"
-        android:layout_height="629dp"
-        android:layout_below="@id/logo">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:id="@+id/rl"
-                android:layout_width="wrap_content"
-                android:layout_height="231dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/corn"
-                android:gravity="center"
-                android:orientation="horizontal">
+        android:layout_height="541dp"
+        android:layout_below="@id/logo" />
 
 
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="28dp"
-                    android:layout_toStartOf="@+id/Progress"
-                    android:fontFamily="@font/lora"
-                    android:text="Шкала Профессиональный рост и мотивация"
-                    android:textColor="#606287"
-                    android:textSize="18dp" />
-
-                <ImageView
-                    android:id="@+id/Progress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="142dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="-6dp"
-                    app:srcCompat="@drawable/progress" />
-
-                <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="75dp"
-                    android:layout_marginEnd="1dp"
-                    android:fontFamily="@font/lora"
-                    android:text="Отметьте напротив каждого утвержения степень вашего согласия с ним"
-                    android:textColor="#606287"
-                    android:textSize="14dp" />
-
-                <Button
-                    android:id="@+id/prim"
-                    android:layout_width="302dp"
-                    android:layout_height="46dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="160dp"
-                    android:layout_marginEnd="32dp"
-                    android:backgroundTint="#606287"
-                    android:fontFamily="@font/lora"
-                    android:text="Начать тестирование"
-                    android:textColor="#D0D1F0" />
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl2"
-                android:layout_width="wrap_content"
-                android:layout_height="231dp"
-                android:layout_below="@id/rl"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/corn"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/name1"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="28dp"
-                    android:layout_toStartOf="@+id/Progress1"
-                    android:fontFamily="@font/lora"
-                    android:text="Шкалирование по Томасу"
-                    android:textColor="#606287"
-                    android:textSize="18dp" />
-
-                <ImageView
-                    android:id="@+id/Progress1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="142dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="-6dp"
-                    app:srcCompat="@drawable/progress" />
-
-                <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="59dp"
-                    android:layout_marginEnd="1dp"
-                    android:fontFamily="@font/lora"
-                    android:text="Отметьте напротив каждого утвержения степень вашего согласия с ним"
-                    android:textColor="#606287"
-                    android:textSize="14dp" />
-
-                <Button
-                    android:id="@+id/hpt"
-                    android:layout_width="302dp"
-                    android:layout_height="46dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="37dp"
-                    android:layout_marginTop="148dp"
-                    android:layout_marginEnd="27dp"
-                    android:backgroundTint="#606287"
-                    android:fontFamily="@font/lora"
-                    android:text="Начать тестирование"
-                    android:textColor="#D0D1F0" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl3"
-                android:layout_width="wrap_content"
-                android:layout_height="256dp"
-                android:layout_below="@id/rl2"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/corn"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/name2"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="28dp"
-                    android:layout_toStartOf="@+id/Progress2"
-                    android:fontFamily="@font/lora"
-                    android:text="Самооценка уровня творческой активности воспитанников"
-                    android:textColor="#606287"
-                    android:textSize="18dp" />
-
-                <ImageView
-                    android:id="@+id/Progress2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="142dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="-6dp"
-                    app:srcCompat="@drawable/progress" />
-
-                <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="103dp"
-                    android:layout_marginEnd="1dp"
-                    android:fontFamily="@font/lora"
-                    android:text="Отметьте напротив каждого утвержения степень вашего согласия с ним"
-                    android:textColor="#606287"
-                    android:textSize="14dp" />
-
-                <Button
-                    android:id="@+id/sytav"
-                    android:layout_width="302dp"
-                    android:layout_height="46dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="194dp"
-                    android:layout_marginEnd="36dp"
-                    android:backgroundTint="#606287"
-                    android:fontFamily="@font/lora"
-                    android:text="Начать тестирование"
-                    android:textColor="#D0D1F0" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/rl4"
-                android:layout_width="wrap_content"
-                android:layout_height="236dp"
-                android:layout_below="@id/rl2"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/corn"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/name3"
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="28dp"
-                    android:layout_toStartOf="@+id/Progress3"
-                    android:fontFamily="@font/lora"
-                    android:text="Определение коммуникативных и организаторских способностей"
-                    android:textColor="#606287"
-                    android:textSize="18dp" />
-
-                <ImageView
-                    android:id="@+id/Progress3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="142dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="-6dp"
-                    app:srcCompat="@drawable/progress" />
-
-                <TextView
-                    android:layout_width="180dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="100dp"
-                    android:layout_marginEnd="1dp"
-                    android:fontFamily="@font/lora"
-                    android:text="На каждый из вопросов следует ответить Да или Нет"
-                    android:textColor="#606287"
-                    android:textSize="14dp" />
-
-                <Button
-                    android:id="@+id/okios"
-                    android:layout_width="302dp"
-                    android:layout_height="46dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="177dp"
-                    android:layout_marginEnd="31dp"
-                    android:backgroundTint="#606287"
-                    android:fontFamily="@font/lora"
-                    android:text="Начать тестирование"
-                    android:textColor="#D0D1F0" />
-            </RelativeLayout>
-
-        </LinearLayout>
-    </ScrollView>
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Sv"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/calm"
-            android:layout_marginStart="100dp"
-            android:onClick="Calm"
-            />
+        android:layout_below="@id/LTests"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/help"
+            android:id="@+id/Calm"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="80dp"
+            android:onClick="Calm"
+            android:src="@drawable/calm" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/Calm"
+            android:layout_marginEnd="80dp"
             android:layout_marginStart="100dp"
-            android:layout_marginEnd="100dp"
             android:onClick="Help"
-            />
-    </LinearLayout>
+            android:src="@drawable/help" />
+    </RelativeLayout>
 
 
 </RelativeLayout>

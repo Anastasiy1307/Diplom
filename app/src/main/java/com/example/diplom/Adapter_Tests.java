@@ -22,27 +22,31 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterBuilding extends BaseAdapter {
-
+public class Adapter_Tests extends BaseAdapter {
+    Button Test;
     private Context nContext;
-    private ArrayList<Buildings> mMask;
+    private ArrayList<Maska_Tests> mMask;
     private OnItemClickListener mListener;
     String img="";
+
+    public OnItemClickListener getmListener() {
+        return mListener;
+    }
+
     public interface OnItemClickListener{
         void onItemClick(int position);
     }
-
     public void setOnItemClickListener(OnItemClickListener listener){
         mListener=listener;
     }
 
 
-    public AdapterBuilding(Context nContext, List<Buildings> maskList) {
+    public Adapter_Tests(Context nContext, List<Maska_Tests> maskList) {
         this.nContext = nContext;
         this.maskList = maskList;
     }
 
-    List<Buildings>  maskList;
+    List<Maska_Tests>  maskList;
 
     @Override
     public int getCount() {
@@ -56,7 +60,15 @@ public class AdapterBuilding extends BaseAdapter {
     @Override
     public long getItemId(int i) {return maskList.get(i).getID();}
 
-
+    public static Bitmap loadContactPhoto(ContentResolver cr, long id, Context context) {
+        Uri uri = ContentUris.withAppendedId(ContactsContract.Contacts.CONTENT_URI, id);
+        InputStream input = ContactsContract.Contacts.openContactPhotoInputStream(cr, uri);
+        if (input == null) {
+            Resources res = context.getResources();
+            return BitmapFactory.decodeResource(res, R.drawable.nophoto);
+        }
+        return BitmapFactory.decodeStream(input);
+    }
 
 
     private Bitmap getUserImage(String encodedImg)
@@ -78,31 +90,32 @@ public class AdapterBuilding extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
 
-        View v =View.inflate(nContext,R.layout.activity_buildings,null);
 
-        TextView ID=v.findViewById(R.id.name);
-       ImageView Image= v.findViewById(R.id.PhotoKorp);
+        View v =View.inflate(nContext,R.layout.activity_maska_tests,null);
 
-        Buildings mask=maskList.get(position);
-        ID.setText(mask.getNumber());
+        TextView NameTest=v.findViewById(R.id.name);
+        TextView Short_desription= v.findViewById(R.id.Short);
+        ImageView Image= v.findViewById(R.id.Progress);
+        Button Test = v.findViewById(R.id.start);
 
+        Maska_Tests mask=maskList.get(position);
 
-        Image.setImageBitmap(getUserImage(mask.getImg()));
+        NameTest.setText(mask.getName_test());
+        Short_desription.setText(mask.getShort_descroption());
 
+        Image.setImageBitmap(getUserImage(mask.getImage()));
 
-
-
-
-
-        v.setOnClickListener(new View.OnClickListener() {
+        Test.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intenDetalis=new Intent(nContext,Korpus.class);
-                intenDetalis.putExtra("korpus",mask);
+            public void onClick(View v) {
+                Intent intenDetalis=new Intent(nContext,Questions.class);
+                intenDetalis.putExtra("test",mask);
                 nContext.startActivity(intenDetalis);
-
             }
         });
+
         return v;
     }
+
+
 }

@@ -28,6 +28,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -52,6 +53,7 @@
             app:layout_constraintStart_toStartOf="parent" />
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/RLL"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:layout_below="@id/RL1"
@@ -88,13 +90,19 @@
 
     </RelativeLayout>
 
+  <ListView
+      android:id="@+id/LQuestions"
+      android:layout_width="match_parent"
+      android:layout_height="500dp"/>
+
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginStart="95dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginTop="650dp">
+        android:layout_below="@id/LQuestions"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp">
         <Button
             android:id="@+id/end"
             android:layout_width="wrap_content"

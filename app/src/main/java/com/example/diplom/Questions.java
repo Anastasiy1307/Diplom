@@ -8,18 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Questions extends AppCompatActivity {
     String extra = "";
     TextView nameTest;
     Button end;
+    Maska_Tests mask;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
         nameTest = (TextView) findViewById(R.id.nameTest);
-        final String getExtra = getIntent().getStringExtra("test");
-        nameTest.setText(getExtra);
-        extra = nameTest.getText().toString();
+
+        mask=getIntent().getParcelableExtra("test");
+        nameTest.setText(mask.getName_test());
+
         end = (Button) findViewById(R.id.end);
 
 

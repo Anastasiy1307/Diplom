@@ -43,9 +43,6 @@ public class LogIn_student extends AppCompatActivity {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-                Intent intent = new Intent(LogIn_student.this, Tests.class);
-                startActivity(intent);
-                finish();
 
             }
         });
@@ -85,6 +82,9 @@ public class LogIn_student extends AppCompatActivity {
                             @Override
                             public void run() {
                                 Toast.makeText(LogIn_student.this, "Вход выполнен успешно", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(LogIn_student.this, Tests.class);
+                                startActivity(intent);
+                                finish();
                             }
                         });
                         z = "Успешно";

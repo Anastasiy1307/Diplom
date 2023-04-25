@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Maska_Tests">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/corn"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/Progress"
+            android:fontFamily="@font/lora"
+            android:text="Профессиональный рост и мотивация"
+            android:textColor="#606287"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/Progress"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            app:srcCompat="@drawable/progress" />
+
+        <TextView
+            android:id="@+id/Short"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/lora"
+            android:layout_below="@id/name"
+            android:text="Отметьте напротив каждого утвержения степень вашего согласия с ним"
+            android:textColor="#606287"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/Short"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#606287"
+            android:fontFamily="@font/lora"
+            android:text="Начать тестирование"
+            android:textColor="#D0D1F0"
+            android:textSize="11dp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
