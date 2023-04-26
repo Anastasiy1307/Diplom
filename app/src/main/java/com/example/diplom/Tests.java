@@ -19,24 +19,63 @@ import java.util.List;
 
 public class Tests extends AppCompatActivity {
     private String test = "";
-    View v;
-    Connection connection;
-    List<Maska_Tests> data;
-    ListView listView;
-    Adapter_Tests pAdapter;
-    ImageView imageView;
-
+    Button profrost;
+    Button shkalT;
+    Button samooc;
+    Button KOS;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tests);
-        v = findViewById(com.google.android.material.R.id.ghost_view);
-        GetTextFromSQL(v);
-    }
 
-    public void enterMobile() {
-        pAdapter.notifyDataSetInvalidated();
-        listView.setAdapter(pAdapter);
+        profrost = (Button) findViewById(R.id.prim);
+        profrost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                test = "Шкала Профессиональный рост и мотивация";
+                Intent intent = new Intent(Tests.this, Questions.class);
+                intent.putExtra("test",test);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        shkalT = (Button) findViewById(R.id.hpt);
+        shkalT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                test = "Шкалирование по Томасу";
+                Intent intent = new Intent(Tests.this, Questions.class);
+                intent.putExtra("test",test);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        samooc = (Button) findViewById(R.id.sytav);
+        samooc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                test = "Самооценка уровня творческой активности воспитанников";
+                Intent intent = new Intent(Tests.this, Questions.class);
+                intent.putExtra("test",test);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        KOS = (Button) findViewById(R.id.okios);
+        KOS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                test = "Определение коммуникативных и организаторских способностей";
+                Intent intent = new Intent(Tests.this, Questions.class);
+                intent.putExtra("test",test);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     public void Help(View v) {
@@ -49,41 +88,6 @@ public class Tests extends AppCompatActivity {
         Intent intent = new Intent(Tests.this, Calm.class);
         startActivity(intent);
         finish();
-    }
-
-    public void GetTextFromSQL(View v) {
-        data = new ArrayList<Maska_Tests>();
-        listView = findViewById(R.id.LTests);
-        pAdapter = new Adapter_Tests(Tests.this, data);
-        try {
-            ConnectionHelper connectionHelper = new ConnectionHelper();
-            connection = connectionHelper.connectionClass();
-            if (connection != null) {
-
-                String query = "Select * From Tests";
-                Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery(query);
-
-                while (resultSet.next()) {
-                    Maska_Tests tempMask = new Maska_Tests(
-                            resultSet.getInt("Id"),
-                            resultSet.getString("Name_test"),
-                            resultSet.getString("Short_descroption"),
-                            resultSet.getString("Image"),
-                            resultSet.getInt("number_of_questions")
-                    );
-
-                    data.add(tempMask);
-                    pAdapter.notifyDataSetInvalidated();
-                }
-                connection.close();
-            } else {
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        enterMobile();
-
     }
 
 }
