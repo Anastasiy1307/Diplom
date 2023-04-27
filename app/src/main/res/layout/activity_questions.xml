@@ -64,7 +64,7 @@
     <ProgressBar
             android:id="@+id/progresss"
             android:layout_marginTop="4dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="10dp"
 
             android:layout_width="300dp"
@@ -79,8 +79,8 @@
             android:layout_height="wrap_content"
 
             android:layout_toRightOf="@+id/progresss"
-            android:layout_marginStart="3dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="15dp"
             android:text="0%"
             android:fontFamily="@font/lora"
             android:textColor="#606287"
@@ -115,55 +115,69 @@
 
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/q1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_toStartOf="@+id/Progress"
                     android:fontFamily="@font/lora"
-                    android:text="Профессиональный рост и мотивация"
+                    android:text="1. Я считаю, что профессия, которую я получаю - имеет большое значение для общества."
                     android:textColor="#606287"
                     android:textSize="14sp" />
 
-                <ImageView
-                    android:id="@+id/Progress"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="2dp"
-                    app:srcCompat="@drawable/progress" />
-
-                <TextView
-                    android:id="@+id/Short"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="30dp"
-                    android:fontFamily="@font/lora"
-                    android:layout_below="@id/name"
-                    android:text="Отметьте напротив каждого утвержения степень вашего согласия с ним"
-                    android:textColor="#606287"
-                    android:textSize="11sp" />
-
-                <Button
-                    android:id="@+id/prim"
+                <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer1q1"
+                    android:layout_below="@id/q1"
+                    android:button="@drawable/toggle"
+                    android:text="Неверно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer2q1"
+                    android:layout_below="@id/answer1q1"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее не верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer3q1"
+                    android:layout_below="@id/answer2q1"
+                    android:button="@drawable/toggle"
+                    android:text="Иногда верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
 
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_below="@id/Short"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="#606287"
-                    android:fontFamily="@font/lora"
-                    android:text="Начать тестирование"
-                    android:textColor="#D0D1F0"
-                    android:textSize="11dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer4q1"
+                    android:layout_below="@id/answer3q1"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer5q1"
+                    android:layout_below="@id/answer4q1"
+                    android:button="@drawable/toggle"
+                    android:text="Верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+
+
 
 
             </RelativeLayout>
@@ -181,55 +195,67 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/name1"
+                    android:id="@+id/q2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_toStartOf="@+id/Progress1"
                     android:fontFamily="@font/lora"
-                    android:text="Шкалирование по Томасу"
+                    android:text="2. Я с удовольствием и интересом читаю литературу по моей профессии."
                     android:textColor="#606287"
                     android:textSize="14sp" />
 
-                <ImageView
-                    android:id="@+id/Progress1"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="2dp"
-                    app:srcCompat="@drawable/scal" />
-
-                <TextView
-                    android:id="@+id/Short1"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="30dp"
-                    android:fontFamily="@font/lora"
-                    android:layout_below="@id/name1"
-                    android:text="Отметьте напротив каждого утвержения степень вашего согласия с ним"
-                    android:textColor="#606287"
-                    android:textSize="11sp" />
-
-                <Button
-                    android:id="@+id/hpt"
+                <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer1q2"
+                    android:layout_below="@id/q2"
+                    android:button="@drawable/toggle"
+                    android:text="Неверно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer2q2"
+                    android:layout_below="@id/answer1q2"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее не верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer3q2"
+                    android:layout_below="@id/answer2q2"
+                    android:button="@drawable/toggle"
+                    android:text="Иногда верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
 
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_below="@id/Short1"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="#606287"
-                    android:fontFamily="@font/lora"
-                    android:text="Начать тестирование"
-                    android:textColor="#D0D1F0"
-                    android:textSize="11dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer4q2"
+                    android:layout_below="@id/answer3q2"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer5q2"
+                    android:layout_below="@id/answer4q2"
+                    android:button="@drawable/toggle"
+                    android:text="Верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -245,55 +271,67 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/name2"
+                    android:id="@+id/q3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_toStartOf="@+id/Progress2"
                     android:fontFamily="@font/lora"
-                    android:text="Самооценка уровня творческой активности воспитанников"
+                    android:text="3. Во время обучения по выбранной мною профессии, я узнаю много интересного."
                     android:textColor="#606287"
                     android:textSize="14sp" />
 
-                <ImageView
-                    android:id="@+id/Progress2"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="2dp"
-                    app:srcCompat="@drawable/bulb" />
-
-                <TextView
-                    android:id="@+id/Short2"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="30dp"
-                    android:fontFamily="@font/lora"
-                    android:layout_below="@id/name2"
-                    android:text="Отметьте напротив каждого утвержения степень вашего согласия с ним"
-                    android:textColor="#606287"
-                    android:textSize="11sp" />
-
-                <Button
-                    android:id="@+id/sytav"
+                <CheckBox
                     android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer1q3"
+                    android:layout_below="@id/q3"
+                    android:button="@drawable/toggle"
+                    android:text="Неверно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer2q3"
+                    android:layout_below="@id/answer1q3"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее не верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer3q3"
+                    android:layout_below="@id/answer2q3"
+                    android:button="@drawable/toggle"
+                    android:text="Иногда верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
 
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_below="@id/Short2"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    android:backgroundTint="#606287"
-                    android:fontFamily="@font/lora"
-                    android:text="Начать тестирование"
-                    android:textColor="#D0D1F0"
-                    android:textSize="11dp" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer4q3"
+                    android:layout_below="@id/answer3q3"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer5q3"
+                    android:layout_below="@id/answer4q3"
+                    android:button="@drawable/toggle"
+                    android:text="Верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -309,55 +347,294 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/name3"
+                    android:id="@+id/q4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_toStartOf="@+id/Progress3"
                     android:fontFamily="@font/lora"
-                    android:text="Самооценка уровня творческой активности воспитанников"
+                    android:text="4. Я собираю собственную домашнюю библиотеку из литературы по моей професии."
                     android:textColor="#606287"
                     android:textSize="14sp" />
 
-                <ImageView
-                    android:id="@+id/Progress3"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="2dp"
-                    app:srcCompat="@drawable/list" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer1q4"
+                    android:layout_below="@id/q4"
+                    android:button="@drawable/toggle"
+                    android:text="Неверно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer2q4"
+                    android:layout_below="@id/answer1q4"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее не верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer3q4"
+                    android:layout_below="@id/answer2q4"
+                    android:button="@drawable/toggle"
+                    android:text="Иногда верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer4q4"
+                    android:layout_below="@id/answer3q4"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer5q4"
+                    android:layout_below="@id/answer4q4"
+                    android:button="@drawable/toggle"
+                    android:text="Верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl4"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/Short3"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="30dp"
-                    android:fontFamily="@font/lora"
-                    android:layout_below="@id/name3"
-                    android:text="На каждый из вопросов следует ответить Да или Нет"
-                    android:textColor="#606287"
-                    android:textSize="11sp" />
-
-                <Button
-                    android:id="@+id/okios"
+                    android:id="@+id/q5"
                     android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:layout_alignParentStart="true"
-
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="10dp"
-                    android:layout_below="@id/Short3"
-                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="10dp"
-                    android:backgroundTint="#606287"
                     android:fontFamily="@font/lora"
-                    android:text="Начать тестирование"
-                    android:textColor="#D0D1F0"
-                    android:textSize="11dp" />
+                    android:text="5. Я с удовольствием наблюдаю по телевизору или читаю о деятельности выдающихся представителей моей профессиональной сферы."
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer1q5"
+                    android:layout_below="@id/q5"
+                    android:button="@drawable/toggle"
+                    android:text="Неверно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer2q5"
+                    android:layout_below="@id/answer1q5"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее не верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer3q5"
+                    android:layout_below="@id/answer2q5"
+                    android:button="@drawable/toggle"
+                    android:text="Иногда верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer4q5"
+                    android:layout_below="@id/answer3q5"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer5q5"
+                    android:layout_below="@id/answer4q5"
+                    android:button="@drawable/toggle"
+                    android:text="Верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl5"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/q6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/lora"
+                    android:text="6. Мне нравится решать проблемные задачи по моей специальности, я с удовольствием участвую в обсуждении."
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer1q6"
+                    android:layout_below="@id/q6"
+                    android:button="@drawable/toggle"
+                    android:text="Неверно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer2q6"
+                    android:layout_below="@id/answer1q6"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее не верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer3q6"
+                    android:layout_below="@id/answer2q6"
+                    android:button="@drawable/toggle"
+                    android:text="Иногда верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer4q6"
+                    android:layout_below="@id/answer3q6"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer5q6"
+                    android:layout_below="@id/answer4q6"
+                    android:button="@drawable/toggle"
+                    android:text="Верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl5"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/q7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/lora"
+                    android:text="7. Если бы моей профессии не было, ее необходимо было бы изобрести, потому что она необходима людям."
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer1q7"
+                    android:layout_below="@id/q7"
+                    android:button="@drawable/toggle"
+                    android:text="Неверно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer2q7"
+                    android:layout_below="@id/answer1q7"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее не верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer3q7"
+                    android:layout_below="@id/answer2q7"
+                    android:button="@drawable/toggle"
+                    android:text="Иногда верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer4q7"
+                    android:layout_below="@id/answer3q7"
+                    android:button="@drawable/toggle"
+                    android:text="Скорее верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/answer5q7"
+                    android:layout_below="@id/answer4q7"
+                    android:button="@drawable/toggle"
+                    android:text="Верно"
+                    android:textSize="11sp"
+                    android:textColor="#606287"
+                    android:fontFamily="@font/lora"/>
             </RelativeLayout>
 
         </LinearLayout>
@@ -377,6 +654,7 @@
             android:layout_height="wrap_content"
             android:text="Завершить тест"
             android:fontFamily="@font/lora"
+            android:onClick="End"
             android:textSize="18dp"
             android:textColor="#D0D1F0"
             android:backgroundTint="#606287"/>

@@ -22,4 +22,11 @@ public class Questions extends AppCompatActivity {
 
         nameTest.setText(getExtra);
     }
+
+    public void End(View v) {
+        Intent intent = new Intent(Questions.this, ResultTests.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
