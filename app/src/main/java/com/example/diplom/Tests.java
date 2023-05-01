@@ -45,7 +45,7 @@ public class Tests extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 test = "Шкалирование по Томасу";
-                Intent intent = new Intent(Tests.this, Questions.class);
+                Intent intent = new Intent(Tests.this, Question2.class);
                 intent.putExtra("test",test);
                 startActivity(intent);
                 finish();

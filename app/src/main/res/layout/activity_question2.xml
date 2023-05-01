@@ -8,7 +8,7 @@
     android:background="#B3B5E7"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Questions">
+    tools:context=".Question2">
 
     <RelativeLayout
         android:id="@+id/RL"
@@ -41,7 +41,7 @@
         android:gravity="center">
 
         <TextView
-            android:id="@+id/nameTest"
+            android:id="@+id/nameTestt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lora"
@@ -61,7 +61,7 @@
         android:layout_marginEnd="10dp"
         android:gravity="center">
 
-    <ProgressBar
+        <ProgressBar
             android:id="@+id/progresss"
             android:layout_marginTop="4dp"
             android:layout_marginStart="20dp"

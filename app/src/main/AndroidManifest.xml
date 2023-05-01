@@ -16,6 +16,13 @@
         android:theme="@style/Theme.Diplom"
         tools:targetApi="31">
         <activity
+            android:name=".Question2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Maska_Questions"
             android:exported="false">
             <meta-data
