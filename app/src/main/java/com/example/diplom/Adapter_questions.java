@@ -13,19 +13,31 @@ import android.util.Base64;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Adapter_questions extends BaseAdapter {
-
+    private RadioButton  not;
+    private RadioButton skor_not;
+    private RadioButton in_yes;
+    int bal;
+    private TextView ball;
+    private RadioButton scor_yes;
+    private RadioButton yes;
     private Context nContext;
     private ArrayList<Maska_Questions> mMask;
     private OnItemClickListener mListener;
     String img="";
+
 
     public interface OnItemClickListener{
         void onItemClick(int position);
@@ -65,15 +77,28 @@ public class Adapter_questions extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
 
-        View v =View.inflate(nContext,R.layout.activity_maska_questions,null);
+        View v = View.inflate(nContext, R.layout.activity_maska_questions, null);
 
-        TextView question=v.findViewById(R.id.q1);
+        TextView question = v.findViewById(R.id.q1);
 
-
-        Maska_Questions mask=maskList.get(position);
+        Maska_Questions mask = maskList.get(position);
 
         question.setText(mask.getQuestion());
+
+
+
+        not = (RadioButton) v.findViewById(R.id.answ1);
+        skor_not = (RadioButton) v.findViewById(R.id.answ2);
+        in_yes = (RadioButton) v.findViewById(R.id.answ3);
+        scor_yes = (RadioButton) v.findViewById(R.id.answ4);
+        yes = (RadioButton) v.findViewById(R.id.answ5);
+
 
         return v;
     }
 }
+
+
+
+
+

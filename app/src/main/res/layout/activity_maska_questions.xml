@@ -27,58 +27,57 @@
             android:fontFamily="@font/lora"
             android:text="1. Я считаю, что профессия, которую я получаю - имеет большое значение для общества."
             android:textColor="#606287"
+
             android:textSize="14sp" />
-        <CheckBox
+        <RadioGroup
+            android:id="@+id/RG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/answer1q1"
-            android:layout_below="@id/q1"
-            android:button="@drawable/toggle"
-            android:text="Неверно"
-            android:textSize="11sp"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
-        <CheckBox
+            android:layout_below="@+id/q1">
+            <RadioButton
+                android:id="@+id/answ1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Неверно"
+                android:fontFamily="@font/lora"
+                android:textColor="#606287"
+                android:textSize="11sp"/>
+            <RadioButton
+                android:id="@+id/answ2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Скорее неверно"
+                android:textSize="11sp"
+                android:textColor="#606287"
+                android:fontFamily="@font/lora"/>
+           <RadioButton
+            android:id="@+id/answ3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/answer2q1"
-            android:layout_below="@id/answer1q1"
-            android:button="@drawable/toggle"
-            android:text="Скорее не верно"
-            android:textSize="11sp"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/answer3q1"
-            android:layout_below="@id/answer2q1"
-            android:button="@drawable/toggle"
             android:text="Иногда верно"
             android:textSize="11sp"
             android:textColor="#606287"
             android:fontFamily="@font/lora"/>
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/answer4q1"
-            android:layout_below="@id/answer3q1"
-            android:button="@drawable/toggle"
-            android:text="Скорее верно"
-            android:textSize="11sp"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/answer5q1"
-            android:layout_below="@id/answer4q1"
-            android:button="@drawable/toggle"
-            android:text="Верно"
-            android:textSize="11sp"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
+            <RadioButton
+                android:id="@+id/answ4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Скорее верно"
+                android:textSize="11sp"
+                android:textColor="#606287"
+                android:fontFamily="@font/lora"/>
+            <RadioButton
+                android:id="@+id/answ5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Верно"
+                android:textSize="11sp"
+                android:textColor="#606287"
+                android:fontFamily="@font/lora"/>
+
+        </RadioGroup>
+
 
     </RelativeLayout>
 
