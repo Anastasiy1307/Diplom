@@ -1,0 +1,118 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#B3B5E7"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Questions4">
+
+    <RelativeLayout
+        android:id="@+id/RL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RL"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/nameTests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:gravity="center"
+            android:text="Название теста"
+            android:textColor="#606287"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/RLL"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/RL1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progresss"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+
+            android:layout_width="300dp"
+            android:layout_height="15dp"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:progressDrawable="@drawable/progress_bar_style"
+            android:progress="0"
+            android:max="20">
+        </ProgressBar>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toRightOf="@+id/progresss"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="15dp"
+            android:text="0%"
+            android:fontFamily="@font/lora"
+            android:textColor="#606287"
+            android:textSize="15dp"/>
+
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/Ql"
+        android:layout_width="match_parent"
+        android:layout_height="514dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/Sv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp">
+        <Button
+            android:id="@+id/end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Завершить тест"
+            android:fontFamily="@font/lora"
+            android:onClick="End"
+            android:textSize="18dp"
+            android:textColor="#D0D1F0"
+            android:backgroundTint="#606287"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

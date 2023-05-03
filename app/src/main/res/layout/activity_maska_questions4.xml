@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Maska_Questions">
+    tools:context=".maska_questions4">
     <RelativeLayout
         android:id="@+id/rl"
         android:layout_width="300dp"
@@ -28,60 +28,29 @@
             android:text="1. Я считаю, что профессия, которую я получаю - имеет большое значение для общества."
             android:textColor="#606287"
             android:textSize="14sp" />
+
         <CheckBox
+            android:id="@+id/answer1q1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/answer1q1"
             android:layout_below="@id/q1"
             android:button="@drawable/toggle"
-            android:text="Неверно"
-            android:textSize="11sp"
+            android:fontFamily="@font/lora"
+            android:text="Да"
             android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
+            android:textSize="11sp" />
+
         <CheckBox
+            android:id="@+id/answer2q1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/answer2q1"
             android:layout_below="@id/answer1q1"
             android:button="@drawable/toggle"
-            android:text="Скорее не верно"
-            android:textSize="11sp"
+            android:fontFamily="@font/lora"
+            android:text="Нет"
             android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/answer3q1"
-            android:layout_below="@id/answer2q1"
-            android:button="@drawable/toggle"
-            android:text="Иногда верно"
-            android:textSize="11sp"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
+            android:textSize="11sp" />
 
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/answer4q1"
-            android:layout_below="@id/answer3q1"
-            android:button="@drawable/toggle"
-            android:text="Скорее верно"
-            android:textSize="11sp"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/answer5q1"
-            android:layout_below="@id/answer4q1"
-            android:button="@drawable/toggle"
-            android:text="Верно"
-            android:textSize="11sp"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
 
     </RelativeLayout>
-
-
-
 </LinearLayout>

@@ -57,7 +57,7 @@ public class Tests extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 test = "Самооценка уровня творческой активности воспитанников";
-                Intent intent = new Intent(Tests.this, Questions.class);
+                Intent intent = new Intent(Tests.this, Questions3.class);
                 intent.putExtra("test",test);
                 startActivity(intent);
                 finish();
@@ -69,7 +69,7 @@ public class Tests extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 test = "Определение коммуникативных и организаторских способностей";
-                Intent intent = new Intent(Tests.this, Questions.class);
+                Intent intent = new Intent(Tests.this, Questions4.class);
                 intent.putExtra("test",test);
                 startActivity(intent);
                 finish();
