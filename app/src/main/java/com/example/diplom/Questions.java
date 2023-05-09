@@ -103,29 +103,14 @@ public class Questions extends AppCompatActivity {
             }
         });
 
-        Ball(bal);
+
+
 
 
 
     }
 
-    private void Ball(int bal) {
-        if (not.isChecked()){
-            bal = bal +1;
-        } else if (not.isChecked()){
-            bal = bal +2;
-        } else if (not.isChecked()){
-            bal = bal +3;
-        } else if (not.isChecked()){
-            bal = bal +4;
-        } else if (not.isChecked()){
-            bal = bal +5;
-        } else
-        {
-            bal = bal;
-        }
 
-    }
 
     private void SaveIntoSharePrefs(String key, boolean value) {
 

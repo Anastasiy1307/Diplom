@@ -80,24 +80,19 @@ public class Adapter_questions extends BaseAdapter {
 
         TextView question = v.findViewById(R.id.q1);
 
-        Maska_Questions mask = maskList.get(position);
+        Maska_Questions mask = maskList.get(position) ;
 
         question.setText(mask.getQuestion());
 
 
 
         not = (RadioButton) v;
-        mask.getQuestion(not.getId()).setSelected(true);
+
 
         return v;
     }
 
-    public void onClick(View v) {
-        RadioButton btn = (RadioButton) v;
-        Maska_Questions mask = maskList.get(position);
-        question.unselectAll(); // unselects all Answer
-        question.getAnswer(btn.getId()).setSelected(true);
-    }
+
 
 
 
