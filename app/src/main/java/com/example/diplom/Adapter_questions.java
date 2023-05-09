@@ -18,6 +18,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,8 +72,6 @@ public class Adapter_questions extends BaseAdapter {
 
 
 
-
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -87,15 +86,21 @@ public class Adapter_questions extends BaseAdapter {
 
 
 
-        not = (RadioButton) v.findViewById(R.id.answ1);
-        skor_not = (RadioButton) v.findViewById(R.id.answ2);
-        in_yes = (RadioButton) v.findViewById(R.id.answ3);
-        scor_yes = (RadioButton) v.findViewById(R.id.answ4);
-        yes = (RadioButton) v.findViewById(R.id.answ5);
-
+        not = (RadioButton) v;
+        mask.getQuestion(not.getId()).setSelected(true);
 
         return v;
     }
+
+    public void onClick(View v) {
+        RadioButton btn = (RadioButton) v;
+        Maska_Questions mask = maskList.get(position);
+        question.unselectAll(); // unselects all Answer
+        question.getAnswer(btn.getId()).setSelected(true);
+    }
+
+
+
 }
 
 
