@@ -12,6 +12,7 @@ public class Maska_Questions implements Parcelable {
     protected Maska_Questions(Parcel in) {
         ID = in.readInt();
         Question = in.readString();
+
     }
 
 

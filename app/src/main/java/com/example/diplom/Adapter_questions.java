@@ -80,7 +80,7 @@ public class Adapter_questions extends BaseAdapter {
 
         TextView question = v.findViewById(R.id.q1);
 
-        Maska_Questions mask = maskList.get(position);
+        Maska_Questions mask = maskList.get(position) ;
 
         question.setText(mask.getQuestion());
 
