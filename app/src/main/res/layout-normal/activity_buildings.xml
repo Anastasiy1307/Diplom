@@ -10,12 +10,12 @@
 
     <RelativeLayout
         android:id="@+id/Background_heading"
-        android:layout_width="392dp"
-        android:layout_height="188dp"
+        android:layout_width="330dp"
+        android:layout_height="180dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/corn"
-
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,8 +23,8 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/PhotoKorp"
-            android:layout_width="196dp"
-            android:layout_height="185dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
@@ -44,15 +44,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+
             android:layout_marginStart="22dp"
-            android:layout_marginTop="85dp"
+            android:gravity="center"
             android:layout_marginEnd="58dp"
             android:layout_toStartOf="@+id/PhotoKorp"
-
             android:fontFamily="@font/lora"
             android:text="Корпус"
             android:textColor="#606287"
-            android:textSize="20sp" />
+            android:textSize="16sp" />
 
 
     </RelativeLayout>
