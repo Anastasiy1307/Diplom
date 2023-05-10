@@ -27,7 +27,7 @@ public class Tests extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tests);
-
+        final String getExtra = getIntent().getStringExtra("ID");
         profrost = (Button) findViewById(R.id.prim);
         profrost.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +47,7 @@ public class Tests extends AppCompatActivity {
                 test = "Шкалирование по Томасу";
                 Intent intent = new Intent(Tests.this, Question2.class);
                 intent.putExtra("test",test);
+                intent.putExtra("ID",getExtra);
                 startActivity(intent);
                 finish();
             }
@@ -59,6 +60,7 @@ public class Tests extends AppCompatActivity {
                 test = "Самооценка уровня творческой активности воспитанников";
                 Intent intent = new Intent(Tests.this, Questions3.class);
                 intent.putExtra("test",test);
+                intent.putExtra("ID",getExtra);
                 startActivity(intent);
                 finish();
             }
@@ -71,6 +73,7 @@ public class Tests extends AppCompatActivity {
                 test = "Определение коммуникативных и организаторских способностей";
                 Intent intent = new Intent(Tests.this, Questions4.class);
                 intent.putExtra("test",test);
+                intent.putExtra("ID",getExtra);
                 startActivity(intent);
                 finish();
             }

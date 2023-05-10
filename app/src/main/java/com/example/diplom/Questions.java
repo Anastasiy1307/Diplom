@@ -10,11 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -27,85 +30,96 @@ public class Questions extends AppCompatActivity {
     TextView nameTest;
     View v;
     Connection connection;
+    String ConnectionResult = "";
+    String test = "";
+    public final int[] i = {0};
 
-    RadioGroup radioGroup;
+    Button not;
+    Button snv;
+    Button iv;
+    Button sv;
+    Button ver;
+    int balll;
+    int ball = 0;
+    String ID;
 
-    private RadioButton not;
-    private RadioButton skor_not;
-    private RadioButton in_yes;
-    int bal = 0;
-    private TextView ball;
-    private RadioButton scor_yes;
-    private RadioButton yes;
-    RadioButton radioButton;
+    TextView bal;
 
-    List<Maska_Questions> data;
-    ListView listView;
-    Adapter_questions pAdapter;
-    String zapr;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
         v = findViewById(com.google.android.material.R.id.ghost_view);
-        View w = View.inflate(Questions.this, R.layout.activity_maska_questions, null);
-
-        radioGroup = w.findViewById(R.id.RG);
-
-        not = (RadioButton) w.findViewById(R.id.answ1);
-        skor_not = (RadioButton) w.findViewById(R.id.answ2);
-        in_yes = (RadioButton) w.findViewById(R.id.answ3);
-        scor_yes = (RadioButton) w.findViewById(R.id.answ4);
-        yes = (RadioButton) w.findViewById(R.id.answ5);
-        ball = (TextView) findViewById(R.id.ball1);
         nameTest = (TextView) findViewById(R.id.nameTest);
         final String getExtra = getIntent().getStringExtra("test");
-
+        final String getExtra1= getIntent().getStringExtra("ID");
+        test = getExtra;
+        ID = getExtra1;
         nameTest.setText(getExtra);
-        GetTextFromSQL(v);
+        GetTextFromSql1(v);
 
-        not.setChecked(Update("not"));
-        skor_not.setChecked(Update("skor_not"));
-        in_yes.setChecked(Update("in_yes"));
-        scor_yes.setChecked(Update("scor_yes"));
-        yes.setChecked(Update("yes"));
+            not = (Button) findViewById(R.id.not);
+            not.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    balll = ball + 1;
+                    ball = balll;
+                    bal = (TextView) findViewById(R.id.ball1);
+                    bal.setText(Integer.toString(ball));
+                    GetTextFromSql1(v);
 
+                }
+            });
+            snv = (Button) findViewById(R.id.snv);
+            snv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    balll = ball + 2;
+                    ball = balll;
+                    bal = (TextView) findViewById(R.id.ball1);
+                    bal.setText(Integer.toString(ball));
+                    GetTextFromSql1(v);
 
-        not.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean not_isChecked) {
-                SaveIntoSharePrefs("not", not_isChecked);
-              }
-        });
-        skor_not.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean skor_not_isChecked) {
-                SaveIntoSharePrefs("skor_not", skor_not_isChecked);
-            }
-        });
-        in_yes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean in_yes_isChecked) {
-                SaveIntoSharePrefs("in_yes", in_yes_isChecked);
-            }
-        });
-        scor_yes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean scor_yes_isChecked) {
-                SaveIntoSharePrefs("scor_yes", scor_yes_isChecked);
-            }
-        });
-        yes.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean yes_isChecked) {
-                SaveIntoSharePrefs("yes", yes_isChecked);
-            }
-        });
+                }
+            });
+            iv = (Button) findViewById(R.id.iv);
+            iv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    balll = ball + 3;
+                    ball = balll;
+                    bal = (TextView) findViewById(R.id.ball1);
+                    bal.setText(Integer.toString(ball));
+                    GetTextFromSql1(v);
 
+                }
+            });
+            sv = (Button) findViewById(R.id.sv);
+            sv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    balll = ball + 4;
+                    ball = balll;
+                    bal = (TextView) findViewById(R.id.ball1);
+                    bal.setText(Integer.toString(ball));
+                    GetTextFromSql1(v);
 
+                }
+            });
+            ver = (Button) findViewById(R.id.v);
+            ver.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    balll = ball + 5;
+                    ball = balll;
+                    bal = (TextView) findViewById(R.id.ball1);
+                    bal.setText(Integer.toString(ball));
+                    GetTextFromSql1(v);
 
-
+                }
+            });
 
 
 
@@ -113,62 +127,84 @@ public class Questions extends AppCompatActivity {
 
 
 
-    private void SaveIntoSharePrefs(String key, boolean value) {
-
-        SharedPreferences sp = getSharedPreferences("answer", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sp.edit();
-        editor.putBoolean(key, value);
-        editor.apply();
-    }
-
-    private boolean Update(String key) {
-        SharedPreferences sp = getSharedPreferences("answer", MODE_PRIVATE);
-        return sp.getBoolean(key, false);
-
-    }
 
 
     public void End(View v) {
-        Intent intent = new Intent(Questions.this, ResultTests.class);
-        startActivity(intent);
-        finish();
-    }
 
-    public void enterMobile() {
-        pAdapter.notifyDataSetInvalidated();
-        listView.setAdapter(pAdapter);
-    }
-
-    public void GetTextFromSQL(View v) {
-        data = new ArrayList<Maska_Questions>();
-        listView = findViewById(R.id.Ql);
-        pAdapter = new Adapter_questions(Questions.this, data);
         try {
-            ConnectionHelper connectionHelper = new ConnectionHelper();
-            connection = connectionHelper.connectionClass();
+            ConnectionHelper conectionHellper = new ConnectionHelper();
+            connection = conectionHellper.connectionClass();
+            if (ball < 20 )
+            {
+                Toast.makeText(this,"Тест еще не закончен", Toast.LENGTH_LONG).show();
+                return;
+            }
             if (connection != null) {
 
-                String query = "Select * From Questions_t1";
+                String query = "Update Result set Result = '"+ball+"' Where ID = '"+ID+"' and Result is NULL ";
                 Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery(query);
-
-                while (resultSet.next()) {
-                    Maska_Questions tempMask = new Maska_Questions
-                            (resultSet.getInt("ID"),
-                                    resultSet.getString("Question")
-                            );
-                    data.add(tempMask);
-                    pAdapter.notifyDataSetInvalidated();
-                }
-                connection.close();
+                statement.execute(query);
+                Toast.makeText(this,"Успешно добавлено", Toast.LENGTH_LONG).show();
             } else {
+                ConnectionResult = "Check Connection";
             }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
         }
-        enterMobile();
+
+        Intent intent = new Intent(Questions.this, ResultTests.class);
+        intent.putExtra("ball",ball);
+        intent.putExtra("test",test);
+
+        startActivity(intent);
+        finish();
 
     }
 
+    public void GetTextFromSql1(View v) {
+        TextView BaseId = findViewById(R.id.Question);
+
+        try {
+            ConnectionHelper conectionHellper = new ConnectionHelper();
+            connection = conectionHellper.connectionClass();
+            if (connection != null) {
+
+                String query0 = "select count(ID) from Questions_t1 ";
+                Statement statement0 = connection.createStatement();
+                ResultSet resultSet0 = statement0.executeQuery(query0);
+                int c = 0;
+                while (resultSet0.next()) {
+                    c = resultSet0.getInt(1);
+                }
+
+                int finalC = c;
+
+                if (i[0] != finalC) {
+                    i[0] = i[0] + 1;
+                }else
+                {
+                    not.setEnabled(false);
+                    snv.setEnabled(false);
+                    iv.setEnabled(false);
+                    sv.setEnabled(false);
+                    ver.setEnabled(false);
+                }
+
+
+                String query = "Select * From Questions_t1 where ID = " + i[0] + "";
+                Statement statement = connection.createStatement();
+                ResultSet resultSet = statement.executeQuery(query);
+                while (resultSet.next()) {
+                    BaseId.setText(resultSet.getString(2));
+                }
+
+            } else {
+                ConnectionResult = "Check Connection";
+            }
+        } catch (Exception ex) {
+
+        }
+
+    }
 
 }

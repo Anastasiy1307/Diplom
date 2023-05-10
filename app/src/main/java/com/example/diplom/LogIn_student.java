@@ -24,6 +24,7 @@ public class LogIn_student extends AppCompatActivity {
 
     EditText group;
     Button LogIn;
+    int rID;
 
     Connection connection;
 
@@ -31,6 +32,9 @@ public class LogIn_student extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in_student);
+
+
+
         group = (EditText) findViewById(R.id.Group);
         LogIn = (Button) findViewById(R.id.Login);
         LogIn.setOnClickListener(new View.OnClickListener() {
@@ -82,13 +86,18 @@ public class LogIn_student extends AppCompatActivity {
                             @Override
                             public void run() {
                                 Toast.makeText(LogIn_student.this, "Вход выполнен успешно", Toast.LENGTH_LONG).show();
+                                Random random = new Random();
+                                int randomId = random.nextInt(2000);//генерация Id
+                                rID = randomId;
+                                String k = Integer.toString(rID);
                                 Intent intent = new Intent(LogIn_student.this, Tests.class);
+                                intent.putExtra("ID",k);
                                 startActivity(intent);
                                 finish();
                             }
                         });
                         z = "Успешно";
-                      //  ResultS();
+
 
                     } else {
                         runOnUiThread(new Runnable() {
@@ -125,9 +134,7 @@ public class LogIn_student extends AppCompatActivity {
         connection = connectionHelper.connectionClass();
         String z = null;
 
-        Random random = new Random();
-        int randomId = random.nextInt(2000);//генерация Id
-        int rID = randomId;
+
 
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy.LL.dd");//Формат даты, где y - год, L - месяц, d - день

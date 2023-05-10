@@ -76,9 +76,9 @@ public class Adapter_questions extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
 
-        View v = View.inflate(nContext, R.layout.activity_maska_questions, null);
+        View v = View.inflate(nContext, R.layout.activity_questions, null);
 
-        TextView question = v.findViewById(R.id.q1);
+        TextView question = v.findViewById(R.id.Question);
 
         Maska_Questions mask = maskList.get(position) ;
 
@@ -86,7 +86,7 @@ public class Adapter_questions extends BaseAdapter {
 
 
 
-        not = (RadioButton) v;
+
 
 
         return v;

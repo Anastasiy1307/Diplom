@@ -33,50 +33,7 @@
             android:id="@+id/RG"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/q1">
-            <RadioButton
-                android:id="@+id/answ1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Неверно"
-                android:fontFamily="@font/lora"
-                android:textColor="#606287"
-                android:textSize="11sp"/>
-            <RadioButton
-                android:id="@+id/answ2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Скорее неверно"
-                android:textSize="11sp"
-                android:textColor="#606287"
-                android:fontFamily="@font/lora"/>
-           <RadioButton
-            android:id="@+id/answ3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Иногда верно"
-            android:textSize="11sp"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"/>
-
-            <RadioButton
-                android:id="@+id/answ4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Скорее верно"
-                android:textSize="11sp"
-                android:textColor="#606287"
-                android:fontFamily="@font/lora"/>
-            <RadioButton
-                android:id="@+id/answ5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Верно"
-                android:textSize="11sp"
-                android:textColor="#606287"
-                android:fontFamily="@font/lora"/>
-
-        </RadioGroup>
+            android:layout_below="@+id/q1"/>
 
 
     </RelativeLayout>
