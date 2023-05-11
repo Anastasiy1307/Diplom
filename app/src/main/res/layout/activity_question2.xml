@@ -28,6 +28,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo" />
+        <TextView
+            android:id="@+id/ball1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#606287"
+            android:fontFamily="@font/lora"
+            android:layout_toRightOf="@+id/logo"
+            android:textSize="11sp"
+            android:text="баллы"/>
 
     </RelativeLayout>
 
@@ -41,7 +50,7 @@
         android:gravity="center">
 
         <TextView
-            android:id="@+id/nameTestt"
+            android:id="@+id/nameTest"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lora"
@@ -89,12 +98,92 @@
 
 
     </RelativeLayout>
-
-    <ListView
-        android:id="@+id/Ql"
+    <RelativeLayout
+        android:id="@+id/questions"
         android:layout_width="match_parent"
-        android:layout_height="514dp" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RLL"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:id="@+id/Question"
+            android:textSize="18sp"
+            android:text="Вопрос"
+            android:fontFamily="@font/lora"
+            android:textColor="#606287"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/answer"
+        android:layout_below="@+id/questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <Button
+            android:id="@+id/not"
+
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:text="Неверно"
+            android:fontFamily="@font/lora"
+            android:onClick="GetTextFromSql1"
+            android:textSize="16sp"
+            android:textColor="#D0D1F0"
+            android:backgroundTint="#606287"/>
+        <Button
+            android:id="@+id/snv"
+            android:layout_below="@+id/not"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Скорее не верно"
+            android:gravity="center"
+            android:fontFamily="@font/lora"
+            android:onClick="GetTextFromSql1"
+            android:textSize="16sp"
+            android:textColor="#D0D1F0"
+            android:backgroundTint="#606287"/>
+        <Button
+            android:id="@+id/iv"
+            android:layout_below="@+id/snv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Иногда верно"
+            android:fontFamily="@font/lora"
+            android:onClick="GetTextFromSql1"
+            android:textSize="16sp"
+            android:textColor="#D0D1F0"
+            android:backgroundTint="#606287"/>
+        <Button
+            android:id="@+id/sv"
+            android:layout_below="@+id/iv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Скорее верно"
+            android:fontFamily="@font/lora"
+            android:onClick="GetTextFromSql1"
+            android:textSize="16sp"
+            android:textColor="#D0D1F0"
+            android:backgroundTint="#606287"/>
+        <Button
+            android:id="@+id/v"
+            android:layout_below="@+id/sv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Верно"
+            android:fontFamily="@font/lora"
+            android:onClick="GetTextFromSql1"
+            android:textSize="16sp"
+            android:textColor="#D0D1F0"
+            android:backgroundTint="#606287"/>
+    </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -102,7 +191,7 @@
         android:layout_below="@id/Sv"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="40dp">
         <Button
             android:id="@+id/end"
             android:layout_width="wrap_content"

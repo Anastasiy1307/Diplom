@@ -35,6 +35,7 @@ public class Tests extends AppCompatActivity {
                 test = "Шкала Профессиональный рост и мотивация";
                 Intent intent = new Intent(Tests.this, Questions.class);
                 intent.putExtra("test",test);
+                intent.putExtra("ID",getExtra);
                 startActivity(intent);
                 finish();
             }

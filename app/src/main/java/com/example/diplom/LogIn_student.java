@@ -25,6 +25,7 @@ public class LogIn_student extends AppCompatActivity {
     EditText group;
     Button LogIn;
     int rID;
+    String k;
 
     Connection connection;
 
@@ -33,7 +34,10 @@ public class LogIn_student extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in_student);
 
-
+        Random random = new Random();
+        int randomId = random.nextInt(2000);//генерация Id
+        rID = randomId;
+        k = Integer.toString(rID);
 
         group = (EditText) findViewById(R.id.Group);
         LogIn = (Button) findViewById(R.id.Login);
@@ -86,10 +90,7 @@ public class LogIn_student extends AppCompatActivity {
                             @Override
                             public void run() {
                                 Toast.makeText(LogIn_student.this, "Вход выполнен успешно", Toast.LENGTH_LONG).show();
-                                Random random = new Random();
-                                int randomId = random.nextInt(2000);//генерация Id
-                                rID = randomId;
-                                String k = Integer.toString(rID);
+
                                 Intent intent = new Intent(LogIn_student.this, Tests.class);
                                 intent.putExtra("ID",k);
                                 startActivity(intent);
