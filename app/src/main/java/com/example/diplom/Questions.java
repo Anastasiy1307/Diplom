@@ -73,8 +73,8 @@ public class Questions extends AppCompatActivity {
                 public void onClick(View v) {
                     balll = ball + 1;
                     ball = balll;
-                    bal = (TextView) findViewById(R.id.ball1);
-                    bal.setText(Integer.toString(ball));
+
+
                     percc = perc+5;
                     perc = percc;
                     progr = progr + 1;
@@ -92,8 +92,7 @@ public class Questions extends AppCompatActivity {
                 public void onClick(View v) {
                     balll = ball + 2;
                     ball = balll;
-                    bal = (TextView) findViewById(R.id.ball1);
-                    bal.setText(Integer.toString(ball));
+
                     percc = perc+5;
                     perc = percc;
                     progr = progr + 1;
@@ -111,8 +110,7 @@ public class Questions extends AppCompatActivity {
                 public void onClick(View v) {
                     balll = ball + 3;
                     ball = balll;
-                    bal = (TextView) findViewById(R.id.ball1);
-                    bal.setText(Integer.toString(ball));
+
                     percc = perc+5;
                     perc = percc;
                     progr = progr + 1;
@@ -130,8 +128,7 @@ public class Questions extends AppCompatActivity {
                 public void onClick(View v) {
                     balll = ball + 4;
                     ball = balll;
-                    bal = (TextView) findViewById(R.id.ball1);
-                    bal.setText(Integer.toString(ball));
+
                     percc = perc+5;
                     perc = percc;
                     progr = progr + 1;
@@ -149,8 +146,7 @@ public class Questions extends AppCompatActivity {
                 public void onClick(View v) {
                     balll = ball + 5;
                     ball = balll;
-                    bal = (TextView) findViewById(R.id.ball1);
-                    bal.setText(Integer.toString(ball));
+
                     percc = perc+5;
                     perc = percc;
                     progr = progr + 1;

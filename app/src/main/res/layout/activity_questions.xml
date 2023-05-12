@@ -28,15 +28,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo" />
-        <TextView
-            android:id="@+id/ball1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#606287"
-            android:fontFamily="@font/lora"
-            android:layout_toRightOf="@+id/logo"
-            android:textSize="11sp"
-            android:text="баллы"/>
 
     </RelativeLayout>
 
