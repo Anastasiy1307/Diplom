@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class Question2 extends AppCompatActivity {
     Button iv;
     Button sv;
     Button ver;
+    ProgressBar progress;
     int balll;
     int ball = 0;
     int balll1;
@@ -41,6 +43,12 @@ public class Question2 extends AppCompatActivity {
     int ball3 = 0;
     int balll4;
     int ball4 = 0;
+
+    TextView percent;
+    double perc = 0.0;
+    double percc;
+    int progr = 0;
+
     String ID;
 
     TextView bal;
@@ -50,7 +58,7 @@ public class Question2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_questions);
+        setContentView(R.layout.activity_question2);
         v = findViewById(com.google.android.material.R.id.ghost_view);
         nameTest = (TextView) findViewById(R.id.nameTest);
         final String getExtra = getIntent().getStringExtra("test");
@@ -93,6 +101,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll = ball + 1;
                                 ball = balll;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -103,6 +118,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll = ball + 2;
                                 ball = balll;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -113,6 +135,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll = ball + 3;
                                 ball = balll;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -123,6 +152,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll = ball + 4;
                                 ball = balll;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -133,6 +169,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll = ball + 5;
                                 ball = balll;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -145,6 +188,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll1 = ball1 + 1;
                                 ball1 = balll1;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -155,6 +205,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll1 = ball1 + 2;
                                 ball1 = balll1;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -165,6 +222,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll1 = ball1 + 3;
                                 ball1 = balll1;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -175,6 +239,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll1 = ball1 + 4;
                                 ball1 = balll1;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -185,6 +256,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll1 = ball1 + 5;
                                 ball1 = balll1;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -199,6 +277,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll2 = ball2 + 1;
                                 ball2 = balll2;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -209,6 +294,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll2 = ball2 + 2;
                                 ball2 = balll2;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -219,6 +311,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll2 = ball2 + 3;
                                 ball2 = balll2;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -229,6 +328,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll2 = ball2 + 4;
                                 ball2 = balll2;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -239,6 +345,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll2 = ball2 + 5;
                                 ball2 = balll2;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -253,6 +366,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll3 = ball3 + 1;
                                 ball3 = balll3;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -263,6 +383,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll3 = ball3 + 2;
                                 ball3 = balll3;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -273,6 +400,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll3 = ball3 + 3;
                                 ball3 = balll3;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -283,6 +417,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll3 = ball3 + 4;
                                 ball3 = balll3;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -293,6 +434,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll3 = ball3 + 5;
                                 ball3 = balll3;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -307,6 +455,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll4 = ball4 + 1;
                                 ball4 = balll4;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -317,6 +472,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll4 = ball4 + 2;
                                 ball4 = balll4;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -327,6 +489,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll4 = ball4 + 3;
                                 ball4 = balll4;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -337,6 +506,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll4 = ball4 + 4;
                                 ball4 = balll4;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -347,6 +523,13 @@ public class Question2 extends AppCompatActivity {
                             public void onClick(View v) {
                                 balll4 = ball4 + 5;
                                 ball4 = balll4;
+                                percc = perc + 6.67;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Double.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }

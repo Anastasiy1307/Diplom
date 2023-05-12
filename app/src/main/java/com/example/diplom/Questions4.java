@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,13 +27,22 @@ public class Questions4 extends AppCompatActivity {
     String test = "";
     public final int[] i = {0};
 
+    ProgressBar progress;
     Button yes;
     Button not;
+
     int ballks1;
     int ballos1;
     int ball;
     int ballks = 0;
     int ballos = 0;
+
+    TextView percent;
+    int perc = 0;
+    int percc;
+    int progr = 0;
+
+
 
     String ID;
 
@@ -127,6 +137,13 @@ public class Questions4 extends AppCompatActivity {
                             public void onClick(View v) {
                                 ballks1 = ballks + 0;
                                 ballks = ballks1;
+                                percc = perc+5;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Integer.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -137,6 +154,13 @@ public class Questions4 extends AppCompatActivity {
                             public void onClick(View v) {
                                 ballks1 = ballks + 1;
                                 ballks = ballks1;
+                                percc = perc+5;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Integer.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -150,6 +174,13 @@ public class Questions4 extends AppCompatActivity {
                             public void onClick(View v) {
                                 ballks1 = ballks + 1;
                                 ballks = ballks1;
+                                percc = perc+5;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Integer.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -160,6 +191,13 @@ public class Questions4 extends AppCompatActivity {
                             public void onClick(View v) {
                                 ballks1 = ballks + 0;
                                 ballks = ballks1;
+                                percc = perc+5;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Integer.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -174,6 +212,13 @@ public class Questions4 extends AppCompatActivity {
                             public void onClick(View v) {
                                 ballos1 = ballos + 0;
                                 ballos = ballos1;
+                                percc = perc+5;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Integer.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -184,6 +229,13 @@ public class Questions4 extends AppCompatActivity {
                             public void onClick(View v) {
                                 ballos1 = ballos + 1;
                                 ballos = ballos1;
+                                percc = perc+5;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Integer.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -197,6 +249,13 @@ public class Questions4 extends AppCompatActivity {
                             public void onClick(View v) {
                                 ballos1 = ballos + 1;
                                 ballos = ballos1;
+                                percc = perc+5;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Integer.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }
@@ -207,6 +266,13 @@ public class Questions4 extends AppCompatActivity {
                             public void onClick(View v) {
                                 ballos1 = ballos + 0;
                                 ballos = ballos1;
+                                percc = perc+5;
+                                perc = percc;
+                                progr = progr + 1;
+                                progress = (ProgressBar) findViewById(R.id.progresss);
+                                progress.setProgress(progr);
+                                percent = (TextView) findViewById(R.id.percent);
+                                percent.setText(Integer.toString(perc) +"%");
                                 GetTextFromSql1(v);
 
                             }

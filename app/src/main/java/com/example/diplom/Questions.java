@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -34,11 +35,16 @@ public class Questions extends AppCompatActivity {
     String test = "";
     public final int[] i = {0};
 
+    ProgressBar progress;
     Button not;
     Button snv;
     Button iv;
     Button sv;
     Button ver;
+    TextView percent;
+    int perc = 0;
+    int percc;
+    int progr = 0;
     int balll;
     int ball = 0;
     String ID;
@@ -58,6 +64,7 @@ public class Questions extends AppCompatActivity {
         test = getExtra;
         ID = getExtra1;
         nameTest.setText(getExtra);
+
         GetTextFromSql1(v);
 
             not = (Button) findViewById(R.id.not);
@@ -68,6 +75,13 @@ public class Questions extends AppCompatActivity {
                     ball = balll;
                     bal = (TextView) findViewById(R.id.ball1);
                     bal.setText(Integer.toString(ball));
+                    percc = perc+5;
+                    perc = percc;
+                    progr = progr + 1;
+                    progress = (ProgressBar) findViewById(R.id.progresss);
+                    progress.setProgress(progr);
+                    percent = (TextView) findViewById(R.id.percent);
+                    percent.setText(Integer.toString(perc) +"%");
                     GetTextFromSql1(v);
 
                 }
@@ -80,6 +94,13 @@ public class Questions extends AppCompatActivity {
                     ball = balll;
                     bal = (TextView) findViewById(R.id.ball1);
                     bal.setText(Integer.toString(ball));
+                    percc = perc+5;
+                    perc = percc;
+                    progr = progr + 1;
+                    progress = (ProgressBar) findViewById(R.id.progresss);
+                    progress.setProgress(progr);
+                    percent = (TextView) findViewById(R.id.percent);
+                    percent.setText(Integer.toString(perc) +"%");
                     GetTextFromSql1(v);
 
                 }
@@ -92,6 +113,13 @@ public class Questions extends AppCompatActivity {
                     ball = balll;
                     bal = (TextView) findViewById(R.id.ball1);
                     bal.setText(Integer.toString(ball));
+                    percc = perc+5;
+                    perc = percc;
+                    progr = progr + 1;
+                    progress = (ProgressBar) findViewById(R.id.progresss);
+                    progress.setProgress(progr);
+                    percent = (TextView) findViewById(R.id.percent);
+                    percent.setText(Integer.toString(perc) +"%");
                     GetTextFromSql1(v);
 
                 }
@@ -104,6 +132,13 @@ public class Questions extends AppCompatActivity {
                     ball = balll;
                     bal = (TextView) findViewById(R.id.ball1);
                     bal.setText(Integer.toString(ball));
+                    percc = perc+5;
+                    perc = percc;
+                    progr = progr + 1;
+                    progress = (ProgressBar) findViewById(R.id.progresss);
+                    progress.setProgress(progr);
+                    percent = (TextView) findViewById(R.id.percent);
+                    percent.setText(Integer.toString(perc) +"%");
                     GetTextFromSql1(v);
 
                 }
@@ -116,6 +151,13 @@ public class Questions extends AppCompatActivity {
                     ball = balll;
                     bal = (TextView) findViewById(R.id.ball1);
                     bal.setText(Integer.toString(ball));
+                    percc = perc+5;
+                    perc = percc;
+                    progr = progr + 1;
+                    progress = (ProgressBar) findViewById(R.id.progresss);
+                    progress.setProgress(progr);
+                    percent = (TextView) findViewById(R.id.percent);
+                    percent.setText(Integer.toString(perc) +"%");
                     GetTextFromSql1(v);
 
                 }
