@@ -3,6 +3,7 @@ package com.example.diplom;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import android.widget.TextView;
@@ -47,6 +48,7 @@ public class ResultTests extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_tests);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Name = (TextView) findViewById(R.id.nameTests);
 

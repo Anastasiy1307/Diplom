@@ -29,10 +29,10 @@
 
     <Button
         android:id="@+id/result_korp"
-        android:layout_width="354dp"
+        android:layout_width="300dp"
         android:layout_height="54dp"
 
-        android:layout_marginTop="660dp"
+        android:layout_marginTop="600dp"
         android:backgroundTint="#606287"
         android:fontFamily="@font/lora"
         android:text="Результаты по корпусу"
@@ -40,7 +40,7 @@
 
         android:textColorHighlight="#D0D1F0"
         android:textColorLink="#D0D1F0"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
 
     <Button
         android:id="@+id/result_group2"
-        android:layout_width="354dp"
+        android:layout_width="300dp"
         android:layout_height="54dp"
 
         android:backgroundTint="#606287"
@@ -62,7 +62,7 @@
         android:textColorHighlight="#D0D1F0"
 
         android:textColorLink="#D0D1F0"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

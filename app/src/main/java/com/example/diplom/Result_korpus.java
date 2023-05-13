@@ -7,25 +7,18 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 
-public class Help extends AppCompatActivity {
+public class Result_korpus extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_help);
+        setContentView(R.layout.activity_result_korpus);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+
     }
+    public void corp(View v) {
 
-
-    public void Task(View v) {
-        Intent intent = new Intent(Help.this, Tests.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void Calm(View v) {
-        Intent intent = new Intent(Help.this, Calm.class);
-        startActivity(intent);
         finish();
     }
 }

@@ -1,9 +1,342 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#B3B5E7"
     tools:context=".Calm">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="110dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:id="@+id/Sv"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_below="@id/logo">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:fontFamily="@font/lora"
+                    android:text="1. Научитесь отпускать ситуацию"
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Short"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/lora"
+                    android:layout_below="@id/name"
+                    android:text="Что-то не получается? Вдохните, выдохните, улыбнитесь. Если дело можно отложить на потом, вернитесь к нему чуть позже с новыми силами.
+Полезным будет задать себе вопрос: «Что самое страшное может случиться в сложившейся ситуации?» Продумайте свои действия в случае самого негативного сценария. Например, вы не успеваете сдать проект вовремя. Клиент будет недоволен. Возможно, попросит вернуть деньги, оставит негативный отзыв. Что изменится в вашей жизни от этого? Возможно, какое-то время вам будет сложно взять новый заказ. Вам придется оставить комментарий к негативному отзыву, объясняться с заказчиком. Но это все решаемые проблемы, которые глобально не изменят вашу жизнь.
+Как видите, стрессовая ситуация не кажется такой уж стрессовой, если в ней разобраться. Пользуясь техникой, вы научитесь отпускать ситуацию и действовать спокойно даже во внештатной ситуации."
+                    android:textColor="#606287"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:fontFamily="@font/lora"
+                    android:text="2. Ищите новые возможности, а не концентрируйтесь на проблеме"
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Short1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/lora"
+                    android:layout_below="@id/name1"
+                    android:text="Вместо самобичевания сконцентрируйтесь на том, какие возможности открывает для вас стрессовая ситуация. Вы поссорились с другом? Конечно, это неприятно, но у вас есть хорошая возможность позвонить другому другу и сходить вместе в кино, на выставку, заняться спортом. Вы потеряли ключевого клиента? Сконцентрируйтесь на поиске новых заказчиков, которые, возможно, принесут вам больше прибыли. Уходите от состояния стресса, находя новые возможности.
+Многие люди добились успеха после серии неудач. Помните об этом. «Я не терпел поражений. Я просто нашёл 10 000 способов, которые не работают» – цитата Томаса Эдисона."
+                    android:textColor="#606287"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:fontFamily="@font/lora"
+                    android:text="3. Дышите глубоко"
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Short2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/lora"
+                    android:layout_below="@id/name2"
+                    android:text="Глубокое дыхание успокаивает. Поэтому в состоянии стресса начните дышать глубоко, всей грудью. Вы почувствуете, как ваш организм начнет расслабляться, а напряжение – уходить."
+                    android:textColor="#606287"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:fontFamily="@font/lora"
+                    android:text="4. Сожмите эспандер"
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Short3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/lora"
+                    android:layout_below="@id/name3"
+                    android:text="Снять стресс помогают физические упражнения. Например, сожмите эспандер 50-60 раз. Вы заметите, как стресс начинает уходить, и снова можете спокойно мыслить, искать выход из стрессовой ситуации, принимать решения."
+                    android:textColor="#606287"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:fontFamily="@font/lora"
+                    android:text="5. Выспитесь!"
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Short5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/lora"
+                    android:layout_below="@id/name5"
+                    android:text="Что делают кошки после перенесенного стресса? Они спят. Действительно, сон помогает восстановить силы, подсознание во время сна ищет решение проблемы, которое «озаряет» вас утром.
+Если вы испытали сильный стресс, ложитесь спать пораньше. Предварительно послушайте приятную и спокойную музыку, чтобы настроиться на отдых. Вы заметите, как стресс уйдет, и сможете снова радоваться жизни."
+                    android:textColor="#606287"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/name6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:fontFamily="@font/lora"
+                    android:text="6. Посмотрите смешной ролик на YouTube"
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Short6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/lora"
+                    android:layout_below="@id/name6"
+                    android:text="Что делают кошки после перенесенного стресса? Они спят. Действительно, сон помогает восстановить силы, подсознание во время сна ищет решение проблемы, которое «озаряет» вас утром.
+Если вы испытали сильный стресс, ложитесь спать пораньше. Предварительно послушайте приятную и спокойную музыку, чтобы настроиться на отдых. Вы заметите, как стресс уйдет, и сможете снова радоваться жизни."
+                    android:textColor="#606287"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/corn"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/name7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+
+                    android:fontFamily="@font/lora"
+                    android:text="7. Порисуйте"
+                    android:textColor="#606287"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Short7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/lora"
+                    android:layout_below="@id/name7"
+                    android:text="Даже если вы не умеете рисовать, почиркайте на бумаге, выведите какие-либо узоры или абстракции. Во время рисования вы отвлечетесь от проблем. Подсознательное получит возможность выработать решение, которое вам «придет в голову». Это хороший способ быстро снять стресс в любом месте и практически в любой ситуации."
+                    android:textColor="#606287"
+                    android:textSize="11sp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Sv"
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/Calm"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="80dp"
+            android:onClick="Help"
+            android:src="@drawable/help" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@+id/Calm"
+            android:layout_marginEnd="80dp"
+            android:layout_marginStart="100dp"
+            android:onClick="Task"
+            android:src="@drawable/task" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

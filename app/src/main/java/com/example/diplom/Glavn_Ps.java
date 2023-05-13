@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,6 +34,7 @@ public class Glavn_Ps extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_glavn_ps);
         v = findViewById(com.google.android.material.R.id.ghost_view);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         GetTextFromSQL(v);
 
 

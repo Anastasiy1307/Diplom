@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.io.ByteArrayOutputStream;
@@ -25,17 +26,31 @@ public class Korpus extends AppCompatActivity {
     Connection connection;
     View v;
     String img="";
+    Button result_korp;
+    Button result_group;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_korpus);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         mask=getIntent().getParcelableExtra("korpus");
 
         korpus=findViewById(R.id.korpus_img);
 
         korpus.setImageBitmap(getImgBitmap(mask.getImg()));
         v =findViewById(com.google.android.material.R.id.ghost_view);
+
+        result_korp = findViewById(R.id.result_korp);
+        result_korp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Korpus.this, Result_korpus.class);
+                intent.putExtra("korp",mask);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     private Bitmap getImgBitmap(String encodedImg) {
         if(encodedImg!=null&& !encodedImg.equals("null")) {

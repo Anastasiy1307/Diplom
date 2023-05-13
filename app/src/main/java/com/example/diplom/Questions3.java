@@ -3,6 +3,7 @@ package com.example.diplom;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -62,6 +63,7 @@ public class Questions3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions3);
         v = findViewById(com.google.android.material.R.id.ghost_view);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         nameTest = (TextView) findViewById(R.id.nameTest);
         final String getExtra = getIntent().getStringExtra("test");
         final String getExtra1= getIntent().getStringExtra("ID");

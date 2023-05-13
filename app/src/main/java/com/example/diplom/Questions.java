@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -58,6 +59,7 @@ public class Questions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions);
         v = findViewById(com.google.android.material.R.id.ghost_view);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         nameTest = (TextView) findViewById(R.id.nameTest);
         final String getExtra = getIntent().getStringExtra("test");
         final String getExtra1= getIntent().getStringExtra("ID");
