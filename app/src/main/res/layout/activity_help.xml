@@ -62,16 +62,75 @@
         android:layout_marginEnd="30dp"
         android:background="@drawable/corn"
         android:gravity="center"
+
         android:orientation="horizontal">
 
 
         <TextView
+            android:id="@+id/help"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lora"
-            android:text="Психолог \n1 корпус:\nФИО\nКак связаться\nПсихолог \n2 корпус:\nФИО\nКак связаться\nПсихолог \n3 корпус:\nБахирева Елена Валерьевна\nКак связаться\n\nСлужбы поддержки:\nТелефон..."
+            android:text="Психолог \n1 корпус:\nВерина Ирина Евгеньевна\nКак связаться"
             android:textColor="#606287"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:layout_below="@+id/help"
+            android:text="Вконтакте"
+            android:textColor="#606287"
+            android:autoLink="web"
+            android:textStyle="bold"
+            android:linksClickable="true"
+            android:onClick="VK12k"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/help1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:layout_below="@+id/link"
+            android:text="Психолог \n2 корпус:\nВерина Ирина Евгеньевна\nКак связаться"
+            android:textColor="#606287"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/link1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:layout_below="@+id/help1"
+            android:text="Вконтакте"
+            android:textColor="#606287"
+            android:autoLink="web"
+            android:textStyle="bold"
+            android:linksClickable="true"
+            android:onClick="VK12k"
+            android:textSize="20sp"  />
+        <TextView
+            android:id="@+id/help2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:layout_below="@+id/link1"
+            android:text="Психолог \n3 корпус:\nБахирева Елена Валерьевна\nКак связаться"
+            android:textColor="#606287"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/link2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora"
+            android:layout_below="@+id/help2"
+            android:text="Вконтакте"
+            android:textColor="#606287"
+            android:autoLink="web"
+            android:textStyle="bold"
+            android:linksClickable="true"
+            android:onClick="VK3k"
+            android:textSize="20sp" />
     </RelativeLayout>
 
     <RelativeLayout

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".mask_result">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/corn"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lora"
+            android:text="Группа:"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lora"
+            android:layout_toRightOf="@+id/textgroup"
+            android:text="43П"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/textresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@+id/group"
+            android:fontFamily="@font/lora"
+            android:text="Результат:"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/resulta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toRightOf="@+id/textresult"
+            android:fontFamily="@font/lora"
+            android:text="100"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/textdata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+           android:layout_below="@+id/textgroup"
+            android:fontFamily="@font/lora"
+            android:text="Дата прохождения:"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/textgroup"
+            android:layout_toRightOf="@+id/textdata"
+            android:fontFamily="@font/lora"
+            android:text="2023.05.12"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

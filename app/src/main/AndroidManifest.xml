@@ -16,6 +16,13 @@
         android:theme="@style/Theme.Diplom"
         tools:targetApi="31">
         <activity
+            android:name=".mask_result"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Result_korpus"
             android:exported="false">
             <meta-data

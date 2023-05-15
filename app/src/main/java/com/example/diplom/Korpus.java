@@ -27,6 +27,7 @@ public class Korpus extends AppCompatActivity {
     View v;
     String img="";
     Button result_korp;
+    int id_korp;
     Button result_group;
 
     @Override
@@ -40,13 +41,14 @@ public class Korpus extends AppCompatActivity {
 
         korpus.setImageBitmap(getImgBitmap(mask.getImg()));
         v =findViewById(com.google.android.material.R.id.ghost_view);
+        id_korp = mask.getID();
 
         result_korp = findViewById(R.id.result_korp);
         result_korp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Korpus.this, Result_korpus.class);
-                intent.putExtra("korp",mask);
+                intent.putExtra("korp",id_korp);
                 startActivity(intent);
                 finish();
             }
