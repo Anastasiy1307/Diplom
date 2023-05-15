@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".maska_group"
+    >
+
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/Horiz_fon"
+        android:layout_width="153dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#606287"
+        android:backgroundTint="#D0D1F0"
+        android:gravity="center"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094">
+
+
+        <TextView
+            android:id="@+id/Groupp"
+            android:layout_width="78dp"
+            android:layout_height="24dp"
+
+            android:layout_alignStart="@+id/ppz"
+            android:layout_alignTop="@+id/ppz"
+            android:layout_alignEnd="@+id/ppz"
+            android:layout_alignBottom="@+id/ppz"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="6dp"
+
+            android:gravity="center_horizontal"
+            android:text="9:00"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

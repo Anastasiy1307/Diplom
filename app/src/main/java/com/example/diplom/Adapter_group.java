@@ -2,22 +2,18 @@ package com.example.diplom;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Base64;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Adapter_Specialties extends BaseAdapter {
+public class Adapter_group extends BaseAdapter {
 
     private Context nContext;
-    private ArrayList<Mask_specialties> mMask;
+    private ArrayList<maska_group> mMask;
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener{
@@ -29,12 +25,12 @@ public class Adapter_Specialties extends BaseAdapter {
     }
 
 
-    public Adapter_Specialties(Context nContext, List<Mask_specialties> maskList) {
+    public Adapter_group(Context nContext, List<maska_group> maskList) {
         this.nContext = nContext;
         this.maskList = maskList;
     }
 
-    List<Mask_specialties>  maskList;
+    List<maska_group>  maskList;
 
     @Override
     public int getCount() {
@@ -58,20 +54,20 @@ public class Adapter_Specialties extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
 
-        View v =View.inflate(nContext,R.layout.activity_mask_specialties,null);
+        View v =View.inflate(nContext,R.layout.activity_maska_group,null);
 
-        TextView Kod=v.findViewById(R.id.cod);
-        TextView Name=v.findViewById(R.id.Name_Specialities);
+        TextView Name_group=v.findViewById(R.id.Groupp);
 
-        Mask_specialties mask=maskList.get(position);
-        Kod.setText(mask.getCode_specialtires());
-        Name.setText(mask.getName_specialties());
+
+        maska_group mask=maskList.get(position);
+        Name_group.setText(mask.getName_group());
+
 
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intenDetalis=new Intent(nContext,Groups.class);
-                intenDetalis.putExtra("special",mask);
+                Intent intenDetalis=new Intent(nContext,Specialties.class);
+                intenDetalis.putExtra("group",mask);
                 nContext.startActivity(intenDetalis);
 
             }

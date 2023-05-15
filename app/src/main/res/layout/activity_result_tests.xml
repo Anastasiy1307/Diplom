@@ -90,7 +90,8 @@
         android:layout_marginEnd="10dp"
         android:gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="400dp">
+        android:layout_height="400dp"
+        >
     <RelativeLayout
         android:id="@+id/result"
         android:layout_width="300dp"
@@ -101,6 +102,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:gravity="center"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/corn">
 
         <TextView
@@ -128,6 +130,7 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="10dp"
             />
 
     </RelativeLayout>
