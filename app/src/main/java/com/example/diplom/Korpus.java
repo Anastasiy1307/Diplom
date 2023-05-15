@@ -53,6 +53,17 @@ public class Korpus extends AppCompatActivity {
                 finish();
             }
         });
+
+       result_group = (Button) findViewById(R.id.result_group2);
+       result_group.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Korpus.this, Specialties.class);
+                intent.putExtra("korp",id_korp);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     private Bitmap getImgBitmap(String encodedImg) {
         if(encodedImg!=null&& !encodedImg.equals("null")) {

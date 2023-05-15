@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".Mask_specialties">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/corn"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textSpecial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lora"
+            android:text="Код специальности:"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/cod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lora"
+            android:layout_toRightOf="@+id/textSpecial"
+            android:text="43П"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+
+
+
+        <TextView
+            android:id="@+id/Name_Specialities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/textSpecial"
+
+            android:fontFamily="@font/lora"
+            android:text="2023.05.12"
+            android:textColor="#606287"
+
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -36,8 +36,7 @@ public class Result_korpus extends AppCompatActivity {
     View v;
 
     int mask1;
-    Button result_korp;
-    Button result_group;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,5 +86,9 @@ public class Result_korpus extends AppCompatActivity {
     public void enterMobile() {
         pAdapter.notifyDataSetInvalidated();
         listView.setAdapter(pAdapter);
+    }
+
+    public void corp(View view) {
+        this.finish();
     }
 }
