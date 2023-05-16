@@ -27,15 +27,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo" />
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/fil"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="15dp"
-            android:layout_toRightOf="@+id/logo"
-            android:layout_marginStart="225dp"
-            />
     </RelativeLayout>
 
     <RelativeLayout
