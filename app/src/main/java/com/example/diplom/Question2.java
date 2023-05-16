@@ -579,7 +579,7 @@ public class Question2 extends AppCompatActivity {
             }
             if (connection != null) {
 
-                String query = "Update Result set Result = '"+balls+"' Where ID = '"+ID+"' and Result is NULL ";
+                String query = "Update Result set Result = "+balls+" Where ID = '"+ID+"' and Result is NULL ";
                 Statement statement = connection.createStatement();
                 statement.execute(query);
                 Toast.makeText(this,"Успешно добавлено", Toast.LENGTH_LONG).show();

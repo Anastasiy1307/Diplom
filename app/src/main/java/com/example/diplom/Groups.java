@@ -25,7 +25,6 @@ public class Groups extends AppCompatActivity {
     List<maska_group> data;
     GridView listView;
     Adapter_group pAdapter;
-    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

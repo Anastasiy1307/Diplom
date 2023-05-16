@@ -36,6 +36,7 @@ public class Questions extends AppCompatActivity {
     String test = "";
     public final int[] i = {0};
 
+
     ProgressBar progress;
     Button not;
     Button snv;
@@ -181,7 +182,7 @@ public class Questions extends AppCompatActivity {
             }
             if (connection != null) {
 
-                String query = "Update Result set Result = '"+ball+"' Where ID = '"+ID+"' and Result is NULL ";
+                String query = "Update Result set Result = "+ball+" Where ID = '"+ID+"' and Result is NULL ";
                 Statement statement = connection.createStatement();
                 statement.execute(query);
                 Toast.makeText(this,"Успешно добавлено", Toast.LENGTH_LONG).show();

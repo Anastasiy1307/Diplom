@@ -45,12 +45,12 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="6dp"
-
+            android:fontFamily="@font/lora"
             android:gravity="center_horizontal"
             android:text="9:00"
-            android:textColor="@color/white"
+            android:textColor="#606287"
             android:textSize="20sp"
-            android:textStyle="bold"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 

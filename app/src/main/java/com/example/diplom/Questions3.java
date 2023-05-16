@@ -95,7 +95,7 @@ public class Questions3 extends AppCompatActivity {
             }
             if (connection != null) {
                 ball = ball/16;
-                String query = "Update Result set Result = '"+ball+"' Where ID = '"+ID+"' and Result is NULL ";
+                String query = "Update Result set Result = "+ball+" Where ID = '"+ID+"' and Result is NULL ";
                 Statement statement = connection.createStatement();
                 statement.execute(query);
                 Toast.makeText(this,"Успешно добавлено", Toast.LENGTH_LONG).show();
