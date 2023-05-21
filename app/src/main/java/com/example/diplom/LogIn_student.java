@@ -154,6 +154,12 @@ public class LogIn_student extends AppCompatActivity {
 
 
     }
+    public void Back(View v) {
+        Intent intent = new Intent(LogIn_student.this, AVT.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
 
 

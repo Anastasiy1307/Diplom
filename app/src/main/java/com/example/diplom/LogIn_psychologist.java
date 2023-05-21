@@ -42,4 +42,10 @@ public class LogIn_psychologist extends AppCompatActivity {
             }
         });
     }
+    public void Back(View v) {
+        Intent intent = new Intent(LogIn_psychologist.this, AVT.class);
+        startActivity(intent);
+        finish();
+    }
+
 }

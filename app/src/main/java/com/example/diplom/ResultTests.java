@@ -3,9 +3,11 @@ package com.example.diplom;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.TextView;
 
 public class ResultTests extends AppCompatActivity {
@@ -182,6 +184,11 @@ public class ResultTests extends AppCompatActivity {
 
         }
 
+    }
+    public void Back(View v) {
+        Intent intent = new Intent(ResultTests.this, AVT.class);
+        startActivity(intent);
+        finish();
     }
 
 
