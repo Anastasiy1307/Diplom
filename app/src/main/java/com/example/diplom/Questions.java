@@ -38,6 +38,7 @@ public class Questions extends AppCompatActivity {
 
 
     ProgressBar progress;
+    Button end;
     Button not;
     Button snv;
     Button iv;
@@ -222,6 +223,8 @@ public class Questions extends AppCompatActivity {
 
                 if (i[0] != finalC) {
                     i[0] = i[0] + 1;
+                    end = (Button) findViewById(R.id.end);
+                    end.setEnabled(false);
                 }else
                 {
                     not.setEnabled(false);
@@ -229,6 +232,7 @@ public class Questions extends AppCompatActivity {
                     iv.setEnabled(false);
                     sv.setEnabled(false);
                     ver.setEnabled(false);
+                    end.setEnabled(true);
                 }
 
 

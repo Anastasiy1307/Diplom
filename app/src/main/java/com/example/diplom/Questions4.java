@@ -31,7 +31,7 @@ public class Questions4 extends AppCompatActivity {
     ProgressBar progress;
     Button yes;
     Button not;
-
+    Button end;
     int ballks1;
     int ballos1;
     int ball;
@@ -132,6 +132,8 @@ public class Questions4 extends AppCompatActivity {
 
                 if (i[0] != finalC) {
                     i[0] = i[0] + 1;
+                    end = (Button) findViewById(R.id.end);
+                    end.setEnabled(false);
                     if (i[0] ==1 || i[0] == 5 || i[0] == 9 || i[0] == 13 || i[0] == 17){
                         not = (Button) findViewById(R.id.not);
                         not.setOnClickListener(new View.OnClickListener() {
@@ -284,7 +286,7 @@ public class Questions4 extends AppCompatActivity {
                 {
                     not.setEnabled(false);
                     yes.setEnabled(false);
-
+                    end.setEnabled(true);
 
                 }
 

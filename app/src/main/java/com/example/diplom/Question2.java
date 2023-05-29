@@ -28,6 +28,7 @@ public class Question2 extends AppCompatActivity {
     String test = "";
     public final int[] i = {0};
 
+    Button end;
     Button not;
     Button snv;
     Button iv;
@@ -96,6 +97,8 @@ public class Question2 extends AppCompatActivity {
 
                 if (i[0] != finalC) {
                     i[0] = i[0] + 1;
+                    end = (Button) findViewById(R.id.end);
+                    end.setEnabled(false);
                     if (i[0] ==1 || i[0] == 6 || i[0] == 11){
                         not = (Button) findViewById(R.id.not);
                         not.setOnClickListener(new View.OnClickListener() {
@@ -546,6 +549,7 @@ public class Question2 extends AppCompatActivity {
                     iv.setEnabled(false);
                     sv.setEnabled(false);
                     ver.setEnabled(false);
+                    end.setEnabled(true);
                 }
 
 
